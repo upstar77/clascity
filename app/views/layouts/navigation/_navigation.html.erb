@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="<%= root_path %>">
     <%= image_tag "clascity-logo.svg" %>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,7 +9,11 @@
     <div class="navbar-nav ml-auto">
       <a class="nav-item nav-link" href="#">Search a class</a>
       <a class="nav-item nav-link" href="#">help</a>
-      <a class="nav-item nav-link" href="#">Sign up to teach or learn</a>
+      <% if user_signed_in? %>
+        <%= render "layouts/navigation/authed_nav_items" %>
+      <% else %>
+        <%= render "layouts/navigation/no_authed_nav_items" %>
+      <% end %>
     </div>
   </div>
 </nav>
