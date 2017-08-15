@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
+<nav class="navbar navbar-expand-sm topbar">
   <a class="navbar-brand" href="<%= root_path %>">
     <%= image_tag "clascity-logo.svg" %>
   </a>
@@ -10,9 +10,9 @@
       <a class="nav-item nav-link" href="#">Search a class</a>
       <a class="nav-item nav-link" href="#">help</a>
       <% if user_signed_in? %>
-        <%= render "layouts/navigation/authed_nav_items" %>
+        <%= render "layouts/topbar/authed_nav_items" %>
       <% else %>
-        <%= render "layouts/navigation/no_authed_nav_items" %>
+        <%= render "layouts/topbar/no_authed_nav_items" %>
       <% end %>
     </div>
   </div>

@@ -1,0 +1,24 @@
+button, .btn {
+  color: #fff;
+  background: #28a8e0;
+  padding: 8.5px 15px;
+  font-size: 14px;
+  border: none;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 1.5;
+  cursor: pointer;
+  border-radius: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all .15s ease-in;
+  font-weight: 400;
+
+  &:hover , &:focus{
+    opacity: .6;
+    color: #fff;
+  }
+}
