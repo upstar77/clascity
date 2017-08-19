@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.feature "Users can view classes" do
   let(:user) { FactoryGirl.create(:user) }
-  let(:classe) { FactoryGirl.create(:classe, title: "My class", description: "this the description", teacher: user) }
+  let(:classe) { FactoryGirl.create(:classe, title: "My class", description: "this is the description", teacher: user) }
   before do
     login_as(user)
   end

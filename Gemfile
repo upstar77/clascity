@@ -39,6 +39,8 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
 gem 'simple_form', '~> 3.5'
 
+gem 'country_select', require: 'country_select_without_sort_alphabetical'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -46,6 +48,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 3.6', '>= 3.6.1'
+  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
 end
 
 group :development do
