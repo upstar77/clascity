@@ -30,4 +30,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  enumerize:
+    classe:
+      experience:
+        exp_1: "1 year"
+        exp_2: "2 years"
+        exp_3: "3 years"
+        exp_4: "4 years"
+        exp_5: "5+ years"
+        exp_10: "10+ years"

@@ -8,7 +8,6 @@ RSpec.feature "Users can view classes" do
   end
 
   scenario "with the class details" do
-    #TODO Fix
     visit classe_url(classe)
     expect(page).to have_content "My class"
     expect(page).to have_content "this is the description"

@@ -4,7 +4,6 @@ class ClassesController < ApplicationController
   def index
     @classes = Classe.all
   end
-
   def show
     @classe = Classe.find(params[:id])
   end
@@ -43,7 +42,7 @@ class ClassesController < ApplicationController
   private
 
   def classe_params
-    params.require(:classe).permit(:title, :description)
+    params.require(:classe).permit(:title, :description, :experience, :certified)
   end
 
   def set_classe
