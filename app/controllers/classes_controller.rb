@@ -42,7 +42,7 @@ class ClassesController < ApplicationController
   private
 
   def classe_params
-    params.require(:classe).permit(:title, :description, :experience, :certified)
+    params.require(:classe).permit(:title, :description, :tag_names, :experience, :certified)
   end
 
   def set_classe
