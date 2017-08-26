@@ -15,12 +15,18 @@ class Classe < ApplicationRecord
   def tag_names=(names)
     @tag_names = names
     self.tags = []
-    names.split.uniq.each do |name|
+    tags_from_tag_names_str(names).each do |name|
       self.tags << Tag.find_or_initialize_by(name: name)
     end
   end
 
   def tag_names
     self.tags.map(&:name).join(' ')
+  end
+
+  private
+
+  def tags_from_tag_names_str(names)
+    names.downcase.split.uniq
   end
 end
