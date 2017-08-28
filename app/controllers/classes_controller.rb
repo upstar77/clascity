@@ -10,6 +10,7 @@ class ClassesController < ApplicationController
 
   def new
     @classe = Classe.new
+    @classe.locations.build
   end
 
   def create
@@ -42,7 +43,12 @@ class ClassesController < ApplicationController
   private
 
   def classe_params
-    params.require(:classe).permit(:title, :description, :tag_names, :experience, :certified)
+    # Classe params
+    params.require(:classe).permit(
+      :title, :description, :tag_names, :experience, :certified,
+      :locations_attributes =>
+        [:address, :city, :postal_code, :state, :country_code]
+    )
   end
 
   def set_classe

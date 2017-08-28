@@ -60,6 +60,7 @@ GEM
       xpath (~> 2.0)
     childprocess (0.7.1)
       ffi (~> 1.0, >= 1.0.11)
+    cocoon (1.2.10)
     concurrent-ruby (1.0.5)
     countries (2.1.2)
       i18n_data (~> 0.8.0)
@@ -240,6 +241,7 @@ DEPENDENCIES
   bootstrap (~> 4.0.0.beta)
   byebug
   capybara (~> 2.13)
+  cocoon (~> 1.2, >= 1.2.9)
   country_select
   devise (~> 4.3)
   enumerize (~> 2.0)

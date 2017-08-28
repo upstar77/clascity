@@ -18,3 +18,4 @@
 // You can use require bootstrap instead for faster compilation
 //= require bootstrap
 //= require_tree .
+//= require cocoon

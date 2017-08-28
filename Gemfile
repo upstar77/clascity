@@ -43,6 +43,8 @@ gem 'country_select', require: 'country_select_without_sort_alphabetical'
 
 gem 'enumerize', '~> 2.0'
 
+gem 'cocoon', '~> 1.2', '>= 1.2.9'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

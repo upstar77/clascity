@@ -1,9 +1,5 @@
 class Classe < ApplicationRecord
   extend Enumerize
-  attr_accessor :tag_names
-
-  belongs_to :teacher, class_name: "User"
-  has_and_belongs_to_many :tags
 
   enumerize :experience, in: [:exp_1, :exp_2, :exp_3, :exp_4, :exp_5, :exp_10]
 
@@ -11,6 +7,17 @@ class Classe < ApplicationRecord
   validates :description, presence: true, length: {minimum: 10}
   validates :experience, presence: true
   validates :certified, inclusion: { in: [ true, false ] }
+
+  # User
+  belongs_to :teacher, class_name: "User"
+
+  # Location
+  has_many :locations, inverse_of: :classe, dependent: :destroy
+  accepts_nested_attributes_for :locations
+
+  # Tags
+  attr_accessor :tag_names
+  has_and_belongs_to_many :tags
 
   def tag_names=(names)
     @tag_names = names
