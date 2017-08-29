@@ -14,3 +14,4 @@ RSpec.feature "Users can edit existing classes" do
     end
   end
 end
+
