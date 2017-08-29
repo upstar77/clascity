@@ -4,18 +4,23 @@ class ClassesController < ApplicationController
   def index
     @classes = Classe.all
   end
+
   def show
     @classe = Classe.find(params[:id])
+    authorize @classe, :show?
   end
 
   def new
     @classe = Classe.new
     @classe.locations.build
+    authorize @classe, :create?
   end
 
   def create
     @classe = Classe.new(classe_params)
     @classe.teacher = current_user
+
+    authorize @classe, :create?
 
     if @classe.save
       flash[:notice] = "The class has been created."
@@ -27,10 +32,12 @@ class ClassesController < ApplicationController
   end
 
   def edit
+    authorize @classe, :edit?
     @classe = Classe.find(params[:id])
   end
 
   def update
+    authorize @classe, :edit?
     if @classe.update(classe_params)
       flash[:notice] = "The class has been updated."
       redirect_to @classe
