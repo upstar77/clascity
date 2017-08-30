@@ -9,7 +9,8 @@ class ApplicationController < ActionController::Base
   protected
 
   def devise_permitted_params
-    [:first_name, :last_name, :phone, :birthday, :country_code, :city]
+    [:first_name, :last_name, :phone, :birthday, :country_code, :city,
+     :avatar, :avatar_cache, :remove_avatar]
   end
 
   def configure_devise_sanitizer

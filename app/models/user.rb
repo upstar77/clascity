@@ -6,6 +6,13 @@ class User < ApplicationRecord
 
   validates_presence_of :first_name, :last_name, :country_code, :city
 
+  # Avatar
+  mount_uploader :avatar, AvatarUploader
+
+  validates_presence_of  :avatar
+  validates_integrity_of :avatar
+
+  # City
   before_save :downcase_city
 
   def downcase_city
