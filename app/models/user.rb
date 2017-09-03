@@ -11,6 +11,7 @@ class User < ApplicationRecord
 
   validates_integrity_of :avatar
   validates_processing_of :avatar
+  validates :avatar, file_size: { less_than_or_equal_to: 2.megabytes }
 
   # City
   before_save :downcase_city

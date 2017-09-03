@@ -1,6 +1,10 @@
 <div>
   <%= image_tag(user.avatar.url) %>
 </div>
+<div>
+  <%= f.error :avatar %>
+</div>
 <%= f.file_field :avatar %>
 <%= f.hidden_field :avatar_cache %>
+
 <div> Remove avatar <%= f.check_box :remove_avatar %></div>
