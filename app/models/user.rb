@@ -35,8 +35,9 @@ class User < ApplicationRecord
         user.email = data["email"] if user.email.blank?
         user.first_name = data["first_name"] if user.first_name.blank?
         user.last_name = data["last_name"] if user.last_name.blank?
-        user.remote_avatar_url = data["image"] if user.avatar_url.blank?
-        byebug
+
+        bigger_image = data["image"] + "?width=500&height=500"
+        user.remote_avatar_url = bigger_image
       end
     end
   end
