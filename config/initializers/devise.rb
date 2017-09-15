@@ -276,8 +276,8 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
   if Rails.env.production?
-    config.omniauth :facebook, ENV['CLASCITY_PRODUCTION_FACEBOOK_ID'], ENV['CLASCITY_PRODUCTION_FACEBOOK_SECRET']
+    config.omniauth :facebook, ENV['CLASCITY_PRODUCTION_FACEBOOK_ID'], ENV['CLASCITY_PRODUCTION_FACEBOOK_SECRET'], scope: 'email', info_fields: 'email,first_name,last_name'
   else
-    config.omniauth :facebook, ENV['CLASCITY_DEV_FACEBOOK_ID'], ENV['CLASCITY_DEV_FACEBOOK_SECRET']
+    config.omniauth :facebook, ENV['CLASCITY_DEV_FACEBOOK_ID'], ENV['CLASCITY_DEV_FACEBOOK_SECRET'], scope: 'email', info_fields: 'email,first_name,last_name'
   end
 end
