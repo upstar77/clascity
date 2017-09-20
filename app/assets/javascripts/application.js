@@ -15,17 +15,6 @@
 //= require jquery3
 //= require jquery_ujs
 //= require popper
-// You can use require bootstrap instead for faster compilation
 //= require bootstrap
-//= require_tree .
 //= require cocoon
-
-// Turbolinks fires "page:change" when it changes the page content.
-// you could change this to just document ready if you are not using
-// turbolinks.
-$(document).on("turbolinks:load", function(){
-  var data = $('body').data();
-  $(document).trigger(data.controller + ':loaded');
-  $(document).trigger(data.controller + '#' + data.action + ':loaded');
-});
 
