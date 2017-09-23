@@ -53,7 +53,7 @@ gem 'file_validators', '~> 2.1'
 
 gem 'omniauth-facebook', '~> 4.0'
 
-gem 'geocoder', '~> 1.3', '>= 1.3.7'
+gem 'geocoder', '~> 1.4', '>= 1.4.4'
 
 gem 'webpacker', '~> 3.0', '>= 3.0.1'
 

@@ -54,7 +54,9 @@ class ClassesController < ApplicationController
     params.require(:classe).permit(
       :title, :description, :tag_names, :experience, :certified,
       :locations_attributes =>
-        [:address, :city, :postal_code, :state, :country_code]
+        # TODO Restore
+        # [:address, :city, :postal_code, :state, :country_code]
+        [:raw_address]
     )
   end
 

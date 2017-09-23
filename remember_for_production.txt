@@ -1,0 +1,2 @@
+Use new facebook app / credentials
+Use google API key for geocoding
