@@ -1,4 +1,5 @@
-import HelloWorld from './helloworld';
+import { onPageLoad } from './page';
+import ClassAddress from './classAddress';
 
 (function() {
   const Dispatcher = (function() {
@@ -15,8 +16,9 @@ import HelloWorld from './helloworld';
       const path = page.split(':');
 
       switch (page) {
-        case 'users:show':
-          new HelloWorld();
+        case 'classes:new':
+        case 'classes:edit':
+          new ClassAddress();
           break;
       }
     };
@@ -24,8 +26,7 @@ import HelloWorld from './helloworld';
    return Dispatcher;
   })();
 
-  // TODO Replace by constant
-  $(document).on("turbolinks:load", function(){
+  onPageLoad(function() {
     new Dispatcher();
   });
 

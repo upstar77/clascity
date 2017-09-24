@@ -12,7 +12,6 @@ class ClassesController < ApplicationController
 
   def new
     @classe = Classe.new
-    @classe.locations.build
     authorize @classe, :create?
   end
 

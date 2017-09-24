@@ -13,7 +13,32 @@
         <%= render 'location_fields', f: location %>
       <% end %>
 
-      <%=  link_to_add_association 'Add address', f, :locations %>
+      <%=  link_to_add_association 'Add address', f, :locations, class:'js-add-address-cocoon-btn' %>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#class-form-add-address-modal">
+    Add address from modal
+  </button>
+
+  <!-- Modal -->
+  <div id="class-form-add-address-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add an address</h4>
+        </div>
+        <div class="modal-body">
+          <p>Search for an address</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default js-add-class-address">Add address</button>
+        </div>
+      </div>
+
     </div>
   </div>
 
