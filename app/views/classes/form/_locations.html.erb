@@ -1,0 +1,12 @@
+<div>
+  <p><strong>Addresses:</strong></p>
+
+  <div id="class-locations">
+    <%= f.simple_fields_for :locations do |location| %>
+      <% render 'classes/form/location_fields', f: location %>
+    <% end %>
+
+    <%=  link_to_add_association 'Add address', f, :locations, class:'js-add-location-cocoon-btn', partial: 'classes/form/location_fields' %>
+  </div>
+</div>
+

@@ -10,20 +10,20 @@ class ClassePolicy < ApplicationPolicy
   end
 
   def create?
-    is_logged_in?
+    logged_in?
   end
 
   def update?
-    is_owner?
+    owner?
   end
 
   def destroy?
-    is_owner?
+    owner?
   end
 
   private
 
-  def is_owner?
-    is_logged_in? && user == record.teacher
+  def owner?
+    logged_in? && user == record.teacher
   end
 end

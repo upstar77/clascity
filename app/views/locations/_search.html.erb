@@ -1,0 +1,8 @@
+<p>Search for an address</p>
+
+<% if @result %>
+  <%= render 'locations/search_result', result: @result %>
+<% else %>
+  <%= render 'locations/search_form' %>
+<% end %>
+

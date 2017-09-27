@@ -6,4 +6,3 @@ FactoryGirl.define do
     certified false
   end
 end
-

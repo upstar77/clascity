@@ -13,11 +13,11 @@ class UsersController < ApplicationController
     authorize @user, :update?
 
     if @user.update(user_params)
-      flash[:notice] = "User has been updated."
+      flash[:notice] = 'User has been updated.'
       redirect_to @user
     else
-      flash.now[:alert] = "User has not been updated."
-      render "edit"
+      flash.now[:alert] = 'User has not been updated.'
+      render 'edit'
     end
   end
 

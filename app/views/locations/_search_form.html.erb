@@ -1,0 +1,33 @@
+<%= form_tag locations_search_path, method: :get, remote: true,
+  class: 'js-search-location' do %>
+  <div>
+    <%=label_tag 'Street address' %>
+    <%=text_field_tag 'street_address'%>
+  </div>
+
+  <div>
+    <%=label_tag 'City' %>
+    <%=text_field_tag 'city'%>
+  </div>
+
+  <div>
+    <%=label_tag 'State / Province' %>
+    <%=text_field_tag 'state'%>
+  </div>
+
+  <div>
+    <%=label_tag 'Postal Code' %>
+    <%=text_field_tag 'postal_code'%>
+  </div>
+
+  <div>
+    <%=label_tag 'Country' %>
+    <%= country_select nil, :country, selected: current_user.country_code %>
+  </div>
+
+  <div>
+    <%= submit_tag 'Search' %>
+  </div>
+
+<% end -%>
+

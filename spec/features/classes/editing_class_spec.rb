@@ -2,7 +2,6 @@ require "rails_helper"
 
 RSpec.feature "Users can edit existing classes" do
   describe "when not logged in" do
-
     let(:teacher) { FactoryGirl.create(:user) }
     let(:user) { FactoryGirl.create(:user) }
     let(:classe) { FactoryGirl.create(:classe, teacher: user) }
@@ -14,4 +13,3 @@ RSpec.feature "Users can edit existing classes" do
     end
   end
 end
-

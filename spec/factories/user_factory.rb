@@ -9,4 +9,3 @@ FactoryGirl.define do
     birthday '1954-04-19'
   end
 end
-

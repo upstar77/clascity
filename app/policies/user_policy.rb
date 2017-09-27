@@ -10,12 +10,12 @@ class UserPolicy < ApplicationPolicy
   end
 
   def update?
-    is_owner?
+    owner?
   end
 
   private
 
-  def is_owner?
-    is_logged_in? && user == record
+  def owner?
+    logged_in? && user == record
   end
 end

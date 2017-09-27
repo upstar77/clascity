@@ -1,9 +1,7 @@
 require "rails_helper"
 
 RSpec.feature "Users can create new classes" do
-
   describe "when not logged in" do
-
     scenario "refused" do
       visit "/classes/new"
       expect(page.current_path).to eq root_path
@@ -12,7 +10,6 @@ RSpec.feature "Users can create new classes" do
   end
 
   describe "when logged in" do
-
     before do
       login_as(FactoryGirl.create(:user))
       visit "/"
@@ -20,7 +17,6 @@ RSpec.feature "Users can create new classes" do
     end
 
     scenario "with valid attributes" do
-
       fill_in "Title", with: "New Class"
       fill_in "Description", with: "A New Classe for everyone"
       select "1 year", from: "classe_experience"

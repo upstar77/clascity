@@ -1,5 +1,6 @@
+/* eslint-disable no-shadow */
 import { onPageLoad } from './page';
-import ClassAddress from './classAddress';
+import ClassLocation from './class_location';
 
 (function() {
   const Dispatcher = (function() {
@@ -13,23 +14,21 @@ import ClassAddress from './classAddress';
         return false;
       }
 
-      const path = page.split(':');
-
       switch (page) {
         case 'classes:new':
         case 'classes:edit':
-          new ClassAddress();
+          new ClassLocation();
+          break;
+        default:
           break;
       }
     };
 
-   return Dispatcher;
+    return Dispatcher;
   })();
 
-  onPageLoad(function() {
+  onPageLoad(() => {
     new Dispatcher();
   });
-
 }).call(window);
-
 

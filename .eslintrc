@@ -1,0 +1,31 @@
+{
+  "env": {
+    "jquery": true,
+    "browser": true,
+    "es6": true
+  },
+  "extends": "airbnb-base",
+  "globals": {
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "filenames",
+    "import"
+  ],
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "./config/webpack/development.js"
+      }
+    }
+  },
+  "rules": {
+    "class-methods-use-this": "off",
+    "consistent-return": "off",
+    "func-names": "off",
+    "no-new": "off",
+    "import/prefer-default-export": "off",
+    "space-before-function-paren": "off",
+    "wrap-iife": "off",
+  }
+}

@@ -10,12 +10,13 @@ class ApplicationController < ActionController::Base
 
   def devise_permitted_params
     [:first_name, :last_name, :phone, :birthday, :country_code, :city,
-     :avatar, :avatar_cache, :remove_avatar, :remote_avatar_url]
+     :avatar, :avatar_cache, :remove_avatar, remote_avatar_url]
   end
 
   def configure_devise_sanitizer
     devise_parameter_sanitizer.permit(:sign_up, keys: devise_permitted_params)
-    devise_parameter_sanitizer.permit(:account_update, keys: devise_permitted_params)
+    devise_parameter_sanitizer.permit(:account_update,
+                                      keys: devise_permitted_params)
   end
 
   private

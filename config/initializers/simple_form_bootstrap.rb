@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/BlockLength
 # Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
   config.error_notification_class = 'alert alert-danger'
@@ -152,3 +153,4 @@ SimpleForm.setup do |config|
     time: :multi_select
   }
 end
+# rubocop:enable Metrics/BlockLength

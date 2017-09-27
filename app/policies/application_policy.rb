@@ -11,7 +11,7 @@ class ApplicationPolicy
   end
 
   def show?
-    scope.where(:id => record.id).exists?
+    scope.where(id: record.id).exists?
   end
 
   def create?
@@ -53,7 +53,7 @@ class ApplicationPolicy
 
   protected
 
-  def is_logged_in?
+  def logged_in?
     !user.nil?
   end
 end
