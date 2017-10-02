@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
   def devise_permitted_params
     [:first_name, :last_name, :phone, :birthday, :country_code, :city,
-     :avatar, :avatar_cache, :remove_avatar, remote_avatar_url]
+     :avatar, :avatar_cache, :remove_avatar, :remote_avatar_url]
   end
 
   def configure_devise_sanitizer

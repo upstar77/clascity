@@ -1,5 +1,13 @@
 <div class="class-location js-nested-fields js-class-location">
-  <%= f.input :raw_address, input_html: { class: 'hidden-field js-location-raw-address' } %>
+  <%= f.input :address, input_html: { class: 'hidden-field js-location-address' } %>
+  <%= f.input :city, input_html: { class: 'hidden-field js-location-city' } %>
+  <%= f.input :postal_code, input_html: { class: 'hidden-field js-location-postal_code' } %>
+  <%= f.input :state, input_html: { class: 'hidden-field js-location-state' } %>
+  <%= f.input :state_code, input_html: { class: 'hidden-field js-location-state_code' } %>
+  <%= f.input :country_code, input_html: { class: 'hidden-field js-location-country_code' } %>
+  <%= f.input :longitude, input_html: { class: 'hidden-field js-location-longitude' } %>
+  <%= f.input :latitude, input_html: { class: 'hidden-field js-location-latitude' } %>
+
   <%= link_to_remove_association "Remove address", f, { wrapper_class: 'js-nested-fields' } %>
 </div>
 

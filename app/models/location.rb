@@ -1,12 +1,11 @@
 class Location < ApplicationRecord
-  # TODO: after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
-
-  # TODO: Restore some of that
-  # validates_presence_of :address, :city, :postal_code, :state_code,
-  #  :country_code, :latitude, :longitude
+  validates :address,      presence: true
+  validates :city,         presence: true
+  validates :postal_code,  presence: true
+  validates :state_code,   presence: true
+  validates :country_code, presence: true
+  validates :latitude,     presence: true
+  validates :longitude,    presence: true
 
   belongs_to :classe
-
-  # TODO: Remove
-  attr_accessor :raw_address
 end

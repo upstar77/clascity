@@ -3,6 +3,8 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^3.0.1",
+    "bluebird": "^3.5.0",
+    "google-maps": "^3.2.1",
     "ramda": "^0.24.1"
   },
   "devDependencies": {
