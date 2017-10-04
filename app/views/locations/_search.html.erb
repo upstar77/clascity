@@ -1,8 +1,12 @@
+<div class="js-search-location-errors">
+</div>
+
 <p>Search for an address</p>
 
-<% if @result %>
-  <%= render 'locations/search_result', result: @result %>
-<% else %>
+<div class="search-location-search js-search-location-search">
   <%= render 'locations/search_form' %>
-<% end %>
+</div>
+<div class="search-location-result js-search-location-result">
+  <%= render 'locations/search_result' %>
+</div>
 
