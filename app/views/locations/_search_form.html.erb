@@ -2,8 +2,8 @@
 
   <div>
     <%=label_tag 'Country' %>
-    <%= country_select nil, :country, selected: current_user.country_code, class:
-'js-country_code' %>
+    <%= country_select nil, :country, {selected: current_user.country_code}, class:
+'js-select-country_code' %>
   </div>
 
   <div>
@@ -26,7 +26,4 @@
     <%=text_field_tag 'postal_code', nil, class: 'js-input-postal_code' %>
   </div>
 
-  <div>
-    <button type="button" class="js-submit">Search</button>
-  </div>
 </form>

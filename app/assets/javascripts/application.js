@@ -16,4 +16,4 @@
 //= require popper
 //= require bootstrap
 //= require cocoon
-
+//= require ./jquery.assert

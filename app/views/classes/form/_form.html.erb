@@ -2,15 +2,12 @@
   <%= f.input :title %>
   <%= f.input :description %>
   <%= f.input :tag_names, label: "Tags" %>
-  <%= f.input :experience, collection: Classe.experience.options, include_blank: "Select experience" %>
+  <%= f.input :experience, collection: Classe.experience.options, include_blank: 'Select experience' %>
   <%= f.input :certified, as: :select, collection: [['No', false],['Yes', true]], include_blank: false %>
   <%= render 'classes/form/locations', f: f %>
-  <%= f.button :submit, 'Submit', class: "btn-primary" %>
+  <%= f.button :submit, 'Submit', class: 'btn-primary' %>
 <% end %>
 
-<%= render 'classes/form/location_modal' %>
+<%= render 'locations/modal' %>
 
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#class-add-location-modal">
-  Add address from modal
-</button>
 

@@ -14,6 +14,11 @@ const geocoderErrors = {
   ERROR_REQUEST: 'Unknown error. Please contact the support.',
 };
 
+const steps = {
+  SEARCH_ADDRESS: 1,
+  CONFIRM_POSITION: 2,
+};
+
 function formatAddressFromGeocoderResult(result) {
   const data = formatGeocoderResult(result);
   return {
@@ -35,14 +40,29 @@ export default class ClassAddress {
     this.searchResult = null;
     this.selectedLongitude = null;
     this.selectedLatitude = null;
+    this.showSearchAddressStep();
   }
 
   bindEvents() {
-    this.searchAddress = this.searchAddress.bind(this);
-    $('.js-search-location-form .js-submit').click(this.searchAddress);
+    this.onBackButtonClick = this.onBackButtonClick.bind(this);
+    $ao('.js-modal-location-back').click(this.onBackButtonClick);
 
-    this.addAddress = this.addAddress.bind(this);
-    $('.js-add-class-location').click(this.addAddress);
+    this.onNextButtonClick = this.onNextButtonClick.bind(this);
+    $ao('.js-modal-location-next').click(this.onNextButtonClick);
+  }
+
+  onBackButtonClick() {
+    if (this.step === steps.CONFIRM_POSITION) {
+      this.showSearchAddressStep();
+    }
+  }
+
+  onNextButtonClick() {
+    if (this.step === steps.SEARCH_ADDRESS) {
+      this.searchAddress();
+    } else {
+      this.submitAddressAndDismiss();
+    }
   }
 
   initGoogleMaps() {
@@ -52,12 +72,13 @@ export default class ClassAddress {
   }
 
   getSearchFields() {
+    const stepSelector = '.js-modal-location-search-address';
     return {
-      streetAddress: $('.js-search-location-form .js-input-street_address').val(),
-      city:          $('.js-search-location-form .js-input-city').val(),
-      state:         $('.js-search-location-form .js-input-state').val(),
-      postalCode:    $('.js-search-location-form .js-input-postal_code').val(),
-      country:       $('.js-search-location-form .js-input-country').val(),
+      streetAddress: $ao(`${stepSelector} .js-input-street_address`).val(),
+      city:          $ao(`${stepSelector} .js-input-city`).val(),
+      state:         $ao(`${stepSelector} .js-input-state`).val(),
+      postalCode:    $ao(`${stepSelector} .js-input-postal_code`).val(),
+      country:       $ao(`${stepSelector} .js-select-country_code option:selected`).text(),
     };
   }
 
@@ -84,36 +105,47 @@ export default class ClassAddress {
   }
 
   processGeocoderResults(results, status) {
-    // TODO Handle bonnecombe
+    // We should also check the type of result returned (results[0].types)
+    // but it is pretty hard to not exclude special cases
+    // for instance [] can be a place
+    // See https://developers.google.com/maps/documentation/javascript/geocoding#GeocodingAddressTypes
     if (status === 'OK' && results && results.length > 0) {
-      // TODO
-      // if (R.contains('street_address', results[0].types)) {
       const formattedResult = formatAddressFromGeocoderResult(results[0]);
       this.searchResult = formattedResult;
       this.selectedLongitude = formattedResult.longitude;
       this.selectedLatitude = formattedResult.latitude;
-      this.showSecondSearchScreen(formattedResult);
+      this.showConfirmPositionStep(formattedResult);
       return;
-      // }
     }
     this.handleGeocoderError(results, status);
   }
 
-  showSecondSearchScreen() {
-    $('.js-search-location-search').hide();
-    $('.js-search-location-result').show();
+  showSearchAddressStep() {
+    this.step = 1;
+    $ao('.js-modal-location-search-address').show();
+    $ao('.js-modal-location-confirm-position').hide();
+    $ao('.js-modal-location-back').hide();
+    $ao('.js-modal-location-next').text('Search');
+  }
+
+  showConfirmPositionStep() {
+    this.step = 2;
+    $ao('.js-modal-location-search-address').hide();
+    $ao('.js-modal-location-confirm-position').show();
+    $ao('.js-modal-location-back').show();
+    $ao('.js-modal-location-next').text('Confirm Position');
     this.showSearchResult(this.searchResult);
     this.showLocationOnMap(this.searchResult);
   }
 
   showSearchResult(location) {
-    $('.js-search-location-result-label').text(location.address);
+    $ao('.js-modal-location-result-text').text(location.address);
   }
 
   showLocationOnMap(location) {
     const me = this;
 
-    const mapNode = $('.js-search-location-result-map')[0];
+    const mapNode = $ao('.js-modal-location-map')[0];
     const foundLocation = { lng: location.longitude, lat: location.latitude };
 
     this.googleMapsP.then((google) => {
@@ -165,7 +197,7 @@ export default class ClassAddress {
     });
   }
 
-  addAddress() {
+  submitAddressAndDismiss() {
     const location = this.searchResult;
 
     if (!location) {
@@ -191,6 +223,7 @@ export default class ClassAddress {
 
     locationBlock$.find('.js-location-longitude').val(this.selectedLongitude);
     locationBlock$.find('.js-location-latitude').val(this.selectedLatitude);
+    locationBlock$.find('.js-location-address-label').text(location.address);
 
     this.dismissModal();
   }
