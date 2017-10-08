@@ -14,6 +14,7 @@ class Classe < ApplicationRecord
   # Location
   has_many :locations, inverse_of: :classe, dependent: :destroy
   accepts_nested_attributes_for :locations
+  acts_as_geolocated through: :locations
 
   # Tags
   has_and_belongs_to_many :tags

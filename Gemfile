@@ -54,6 +54,8 @@ gem 'omniauth-facebook', '~> 4.0'
 
 gem 'webpacker', '~> 3.0', '>= 3.0.1'
 
+gem 'activerecord-postgres-earthdistance', '~> 0.5.2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop executionand get a debugger
   # console
