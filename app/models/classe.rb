@@ -18,10 +18,20 @@ class Classe < ApplicationRecord
   acts_as_geolocated through: :locations
 
   # Full text search
-  # SLOW: Fix and implement migrate/add_full_text_search_index
   pg_search_scope :search_by_text, against: [:title, :description],
                                    ignoring: :accents,
-                                   using: { tsearch: { dictionary: 'english' } }
+                                   using: {
+                                     tsearch: {
+                                       dictionary: 'english',
+                                       # tsvector_column: 'tsv_title_description'
+                                     }
+                                   }
+
+  # FIXME: Search will be slow until this is restored, however we have to
+  # implement unaccent support with tsvector
+  # trigger.before(:insert, :update).nowrap do
+  #   "tsvector_update_trigger('tsv_title_description', 'pg_catalog.english', title, description);"
+  # end
 
   # rubocop:disable Metrics/AbcSize
   def self.geo_search(params)

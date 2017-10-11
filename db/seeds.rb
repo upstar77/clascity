@@ -54,15 +54,6 @@ class4 = Classe.create! title: 'Trumpet class',
                         teacher: user2,
                         tag_names: 'trumpet music'
 
-# 5_000.times do
-#   Classe.create! title: 'Trumpet class',
-#                  description: Faker::Lorem.paragraph(10, true, 4),
-#                  experience: :exp_4,
-#                  certified: true,
-#                  teacher: user2,
-#                  tag_names: 'trumpet music'
-# end
-
 # Locations
 location1 = Location.create! address: '818 Howe St, Vancouver, BC V6Z 1N4',
                              city: 'Vancouver',
