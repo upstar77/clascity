@@ -11,12 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171007214831) do
+ActiveRecord::Schema.define(version: 20171010235748) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "cube"
   enable_extension "earthdistance"
+  enable_extension "unaccent"
 
   create_table "classes", force: :cascade do |t|
     t.string "title"
@@ -26,7 +27,9 @@ ActiveRecord::Schema.define(version: 20171007214831) do
     t.datetime "updated_at", null: false
     t.string "experience"
     t.boolean "certified"
+    t.tsvector "tsv_title_description"
     t.index ["teacher_id"], name: "index_classes_on_teacher_id"
+    t.index ["tsv_title_description"], name: "index_classes_on_tsv_title_description", using: :gin
   end
 
   create_table "classes_tags", id: false, force: :cascade do |t|

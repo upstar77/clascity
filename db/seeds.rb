@@ -12,7 +12,7 @@ user1 = User.create! first_name: 'John',
                      password_confirmation: 'helloworld',
                      country_code: 'CA',
                      city: 'vancouver',
-                     phone: '604 604 0002',
+                     phone: '604 604 0001',
                      birthday: '1988-01-01'
 
 user2 = User.create! first_name: 'Jane',
@@ -53,6 +53,15 @@ class4 = Classe.create! title: 'Trumpet class',
                         certified: true,
                         teacher: user2,
                         tag_names: 'trumpet music'
+
+# 5_000.times do
+#   Classe.create! title: 'Trumpet class',
+#                  description: Faker::Lorem.paragraph(10, true, 4),
+#                  experience: :exp_4,
+#                  certified: true,
+#                  teacher: user2,
+#                  tag_names: 'trumpet music'
+# end
 
 # Locations
 location1 = Location.create! address: '818 Howe St, Vancouver, BC V6Z 1N4',

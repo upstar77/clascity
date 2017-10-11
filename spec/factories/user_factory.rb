@@ -1,11 +1,12 @@
 FactoryGirl.define do
   factory :user do
-    sequence(:email) { |n| "test#{n}@example.com" }
-    password "password"
-    first_name 'Dale'
-    last_name 'Cooper'
-    country_code 'US'
-    city 'twin peaks'
-    birthday '1954-04-19'
+    sequence(:email) { |n| "john-doe#{n}@gmail.com" }
+    password "helloworld"
+    first_name 'John'
+    last_name 'Doe'
+    country_code 'CA'
+    city 'vancouver'
+    phone '604 604 0001'
+    birthday '1988-01-01'
   end
 end

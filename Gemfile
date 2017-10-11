@@ -56,12 +56,19 @@ gem 'webpacker', '~> 3.0', '>= 3.0.1'
 
 gem 'activerecord-postgres-earthdistance', '~> 0.5.2'
 
+gem 'pg_search', '~> 2.1', '>= 2.1.1'
+
+gem 'database_cleaner', '~> 1.6', '>= 1.6.1'
+
+gem 'hairtrigger', '~> 0.2.20'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop executionand get a debugger
   # console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
+  gem 'faker', '~> 1.6', '>= 1.6.6'
   gem 'rspec-rails', '~> 3.6', '>= 3.6.1'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'

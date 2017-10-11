@@ -22,11 +22,11 @@ RSpec.feature "Users can create new classes" do
       select "1 year", from: "classe_experience"
       select "No", from: "classe_certified"
 
-      fill_in "Address", with: "14 Main Street"
-      fill_in "City", with: "Vancouver"
-      fill_in "Postal code", with: "V6GGGG"
-      fill_in "State", with: "BC"
-      select "Canada", from: "classe_locations_attributes_0_country_code"
+      # fill_in "Address", with: "14 Main Street"
+      # fill_in "City", with: "Vancouver"
+      # fill_in "Postal code", with: "V6GGGG"
+      # fill_in "State", with: "BC"
+      # select "Canada", from: "classe_locations_attributes_0_country_code"
 
       click_button "Submit"
       expect(page).to have_content "The class has been created."
