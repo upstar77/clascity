@@ -1,2 +1,3 @@
 Use new facebook app / credentials
 Use google API key for geocoding
+Use vector indexes for full text search
