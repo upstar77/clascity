@@ -62,6 +62,8 @@ gem 'database_cleaner', '~> 1.6', '>= 1.6.1'
 
 gem 'hairtrigger', '~> 0.2.20'
 
+gem 'webpacker-react', '~> 0.3.2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop executionand get a debugger
   # console

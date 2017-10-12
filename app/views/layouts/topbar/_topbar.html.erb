@@ -7,7 +7,7 @@
   </button>
   <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link" href="#">Search a class</a>
+      <%= link_to "Search a class", classes_path, class: "nav-item nav-link" %>
       <a class="nav-item nav-link" href="#">help</a>
       <% if user_signed_in? %>
         <%= render "layouts/topbar/authed_nav_items" %>
