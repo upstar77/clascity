@@ -6,7 +6,7 @@
   },
   "extends": "airbnb-base",
   "globals": {
-    "$ao": true
+    "$ao": true,
     "$af": true
   },
   "parser": "babel-eslint",
