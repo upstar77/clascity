@@ -6,7 +6,10 @@
 //
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
+import 'bootstrap'; // Popper is in assets/javascript/application.js
 
-import '../top_components';
-import '../dispatcher';
+import '../styles/application.scss';
+
+import '../src/top_components';
+import '../src/dispatcher';
 

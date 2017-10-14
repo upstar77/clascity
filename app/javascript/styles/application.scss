@@ -1,8 +1,7 @@
-@import "bootstrap";
-
+@import "~bootstrap/dist/css/bootstrap.css";
 @import "buttons";
-
 @import "topbar";
+@import "classes";
 
 body {
   color: #454545;
@@ -19,4 +18,3 @@ a {
   }
 }
 
-@import "./classes.scss";
