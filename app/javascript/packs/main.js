@@ -10,6 +10,5 @@ import 'bootstrap'; // Popper is in assets/javascript/application.js
 
 import '../styles/application.scss';
 
-import '../src/top_components';
 import '../src/dispatcher';
 

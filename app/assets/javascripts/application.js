@@ -13,5 +13,6 @@
 //= require turbolinks
 //= require jquery3
 //= require jquery_ujs
+//= require popper
 //= require cocoon
 //= require ./jquery.assert

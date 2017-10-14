@@ -40,6 +40,8 @@ gem 'country_select', require: 'country_select_without_sort_alphabetical'
 
 gem 'enumerize', '~> 2.0'
 
+gem 'popper_js', '~> 1.12', '>= 1.12.5'
+
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 
 gem 'pundit', '~> 1.1'
@@ -59,8 +61,6 @@ gem 'pg_search', '~> 2.1', '>= 2.1.1'
 gem 'database_cleaner', '~> 1.6', '>= 1.6.1'
 
 gem 'hairtrigger', '~> 0.2.20'
-
-gem 'webpacker-react', '~> 0.3.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop executionand get a debugger

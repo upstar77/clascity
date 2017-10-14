@@ -1,6 +1,7 @@
 /* eslint-disable no-shadow */
 import { onPageLoad } from './page';
-import ClassLocation from './class_location';
+import ClasseLocation from './classe_location';
+import ClasseSearchPage from './pages/classe_search';
 
 (function() {
   const Dispatcher = (function() {
@@ -17,7 +18,10 @@ import ClassLocation from './class_location';
       switch (page) {
         case 'classes:new':
         case 'classes:edit':
-          new ClassLocation();
+          new ClasseLocation();
+          break;
+        case 'classes:index':
+          new ClasseSearchPage();
           break;
         default:
           break;

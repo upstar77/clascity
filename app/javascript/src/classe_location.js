@@ -33,7 +33,7 @@ function formatAddressFromGeocoderResult(result) {
   };
 }
 
-export default class ClassAddress {
+export default class ClasseAddress {
   constructor() {
     this.googleMapsP = this.initGoogleMaps();
     this.bindEvents();
