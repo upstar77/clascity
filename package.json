@@ -3,10 +3,12 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^3.0.1",
+    "@storybook/addon-actions": "^3.2.13",
     "@storybook/react": "^3.2.12",
     "babel-preset-react": "^6.24.1",
     "bluebird": "^3.5.0",
     "bootstrap": "4.0.0-beta",
+    "classnames": "^2.2.5",
     "google-maps": "^3.2.1",
     "js-logger": "^1.4.1",
     "popper.js": "^1.12.5",
@@ -14,8 +16,13 @@
     "ramda": "^0.24.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "webpack-merge": "^4.1.0",
-    "webpacker-react": "^0.3.2"
+    "react-google-maps": "^8.5.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-actions": "^2.2.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "webpack-merge": "^4.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.0",

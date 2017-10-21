@@ -1,3 +1,5 @@
 Use new facebook app / credentials
 Use google API key for geocoding
 Use vector indexes for full text search
+Make sure redux logging middleware is not in production
+Add token to googleMapURL in the map component

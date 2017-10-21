@@ -31,5 +31,8 @@
     "space-before-function-paren": "off",
     "wrap-iife": "off",
     "key-spacing": ["error", { "mode": "minimum" }],
+    "react/forbid-prop-types": "off",
+    "react/jsx-no-bind": "off",
+    "react/prefer-stateless-function": "off",
   }
 }

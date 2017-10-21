@@ -1,0 +1,33 @@
+.classe-filter {
+  &__filter-btn {
+    display: block;
+    color: initial;
+    background: initial;
+    padding: initial;
+    font-size: initial;
+    line-height: initial;
+    transition: none;
+
+    &:hover {
+      color: initial;
+      opacity: initial;
+    }
+
+    &:focus {
+      color: initial;
+      opacity: initial;
+    }
+
+    &--active {
+      color: blue;
+
+      &:hover {
+        color: blue;
+      }
+
+      &:focus {
+        color: blue;
+      }
+    }
+  }
+};

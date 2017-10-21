@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.3'
+gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
@@ -61,6 +61,8 @@ gem 'pg_search', '~> 2.1', '>= 2.1.1'
 gem 'database_cleaner', '~> 1.6', '>= 1.6.1'
 
 gem 'hairtrigger', '~> 0.2.20'
+
+gem 'active_model_serializers', '~> 0.10.6'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop executionand get a debugger

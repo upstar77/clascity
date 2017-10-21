@@ -2,7 +2,8 @@ class ClassesController < ApplicationController
   before_action :set_classe, only: %i[show edit update]
 
   def index
-    @classes = Classe.all
+    classes = Classe.all
+    @classes_json = ActiveModelSerializers::SerializableResource.new(classes).as_json
   end
 
   def show

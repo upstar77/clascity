@@ -1,7 +1,12 @@
 import R from 'ramda';
 
-function isNilOrEmpty(arr) {
+export function isNilOrEmpty(arr) {
   return R.isNil(arr) || R.isEmpty(arr);
 }
 
-export { isNilOrEmpty };
+export function addActionPrefix(prefix) {
+  return R.reduce((acc, action) => (
+    R.assoc(action, prefix + action, acc)
+  ), {});
+}
+
