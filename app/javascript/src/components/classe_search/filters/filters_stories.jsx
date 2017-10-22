@@ -12,6 +12,7 @@ function updateFilters({ prop, value }) {
 const props = {
   isPrivateClasse: true,
   updateFilters,
+  submit: action('Submit'),
 };
 
 storiesOf('ClasseSearchFilters', module)

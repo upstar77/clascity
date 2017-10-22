@@ -1,11 +1,14 @@
+/* eslint-disable react/prop-types */
+import React from 'react';
 import { connect } from 'react-redux';
 import ClasseFilters from 'components/classe_search/filters';
 import Selectors from 'pages/classe_search/selectors';
-import { updateFilters } from 'pages/classe_search/actions';
+import { performSearch, updateFilters } from 'pages/classe_search/actions';
 
 function mapStateToProps(state) {
   return {
-    search:          Selectors.searchFilter(state),
+    filters:         Selectors.filters(state),
+    searchStr:       Selectors.searchStrFilter(state),
     isPrivateClasse: Selectors.isPrivateClasseFilter(state),
     certified:       Selectors.certifiedFilter(state),
     availability:    Selectors.availabilityFilter(state),
@@ -20,11 +23,25 @@ function mapDispatchToProps(dispatch) {
     updateFilters(args) {
       dispatch(updateFilters(args));
     },
+    submit(args) {
+      dispatch(performSearch(args));
+    },
   };
 }
+
+const Container = (props) => {
+  const { filters, submit } = props;
+
+  const boundedSubmit = submit.bind(null, filters);
+
+  return (<ClasseFilters
+    submit={boundedSubmit}
+    {...props}
+  />);
+};
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(ClasseFilters);
+)(Container);
 

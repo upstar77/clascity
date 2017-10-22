@@ -47,6 +47,11 @@ class ClassesController < ApplicationController
     end
   end
 
+  def search
+    classes = Classe.geo_search(params)
+    render json: classes, adapter: :json
+  end
+
   private
 
   def classe_params

@@ -5,6 +5,7 @@
     "@rails/webpacker": "^3.0.1",
     "@storybook/addon-actions": "^3.2.13",
     "@storybook/react": "^3.2.12",
+    "axios": "^0.17.0",
     "babel-preset-react": "^6.24.1",
     "bluebird": "^3.5.0",
     "bootstrap": "4.0.0-beta",

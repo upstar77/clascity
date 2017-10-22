@@ -5,5 +5,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:create, :show, :edit, :update]
 
-  resources :classes, except: [:destroy]
+  resources :classes, except: [:destroy] do
+    collection do
+      get 'search'
+    end
+  end
 end

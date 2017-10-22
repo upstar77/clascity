@@ -8,10 +8,10 @@ class SearchFilters extends React.Component {
   }
 
   renderSearchRow() {
-    const { search } = this.props;
+    const { searchStr } = this.props;
 
     const onInput = (event) => {
-      this.onFilterChange('search', event.target.value);
+      this.onFilterChange('searchStr', event.target.value);
     };
 
     return (
@@ -21,7 +21,7 @@ class SearchFilters extends React.Component {
             <span>Search</span>
           </div>
           <div className="col-8">
-            <input value={search} onChange={onInput} />
+            <input value={searchStr} onChange={onInput} />
           </div>
         </div>
       </div>
@@ -198,9 +198,10 @@ class SearchFilters extends React.Component {
   }
 
   renderSubmitButton() {
+    const { submit } = this.props;
     return (
       <div className="class-filter-row">
-        <button>Search</button>
+        <button onClick={submit}>Search</button>
       </div>
     );
   }
@@ -231,14 +232,15 @@ class SearchFilters extends React.Component {
 }
 
 SearchFilters.defaultProps = {
-  search: '',
+  searchStr: '',
   isPrivateClasse: null,
   certified: null,
 };
 
 SearchFilters.propTypes = {
+  submit: PropTypes.func.isRequired,
   updateFilters: PropTypes.func.isRequired,
-  search: PropTypes.string,
+  searchStr: PropTypes.string,
   isPrivateClasse: PropTypes.bool,
   certified: PropTypes.bool,
 };

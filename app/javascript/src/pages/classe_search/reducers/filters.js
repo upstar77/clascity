@@ -3,7 +3,9 @@ import { actionTypes } from '../actions';
 
 export default function(stateParam, actionParam) {
   const state = stateParam || {
-    search:          null,
+    center:          null,
+    bounds:          null,
+    searchStr:       null,
     isPrivateClasse: null,
     certified:       null,
     availability:    {},
@@ -22,6 +24,10 @@ export default function(stateParam, actionParam) {
     case actionTypes.UPDATE_FILTERS: {
       const { prop, value } = action.payload;
       return R.assoc(prop, value, state);
+    }
+    case actionTypes.UPDATE_POSITION: {
+      const { center, bounds } = action.payload;
+      return R.merge(state, { center, bounds });
     }
     default:
       return state;
