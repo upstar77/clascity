@@ -1,6 +1,7 @@
 import { createAction } from 'redux-actions';
 import { addActionPrefix } from 'redux_utils';
 import { searchClasses } from 'requests';
+import { getDistanceFromLatLonInM } from 'distances';
 
 const actionSuffix = [
   'LOAD_CLASSES',
@@ -16,12 +17,17 @@ export const loadClasses = createAction(actionTypes.LOAD_CLASSES);
 /* Fetch from back-end */
 export const performSearch = args => (
   (dispatch) => {
+    const centerLng = args.center.longitude;
+    const centerLat = args.center.latitude;
+    const swLng = args.bounds.sw.longitude;
+    const swLat = args.bounds.sw.latitude;
+    const radius = getDistanceFromLatLonInM(centerLat, centerLng, swLat, swLng);
     searchClasses({
-      longitude: -123.1175606,
-      latitude: 49.2834121,
-      radius: 10000,
-      experience: null,
-      certified: null,
+      longitude: centerLng,
+      latitude: centerLat,
+      radius, // TODO
+      experience: null, // args.experience TODO
+      certified: null, // args.certified, TODO
       searchStr: args.searchStr,
     }).then((classes) => {
       dispatch(loadClasses(classes));

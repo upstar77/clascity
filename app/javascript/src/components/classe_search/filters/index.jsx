@@ -21,7 +21,7 @@ class SearchFilters extends React.Component {
             <span>Search</span>
           </div>
           <div className="col-8">
-            <input value={searchStr} onChange={onInput} />
+            <input value={searchStr || ''} onChange={onInput} />
           </div>
         </div>
       </div>

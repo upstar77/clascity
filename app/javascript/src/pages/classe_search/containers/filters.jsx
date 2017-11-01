@@ -35,8 +35,8 @@ const Container = (props) => {
   const boundedSubmit = submit.bind(null, filters);
 
   return (<ClasseFilters
-    submit={boundedSubmit}
     {...props}
+    submit={boundedSubmit}
   />);
 };
 

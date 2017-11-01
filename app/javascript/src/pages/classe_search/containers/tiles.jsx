@@ -6,7 +6,7 @@ import Selectors from 'pages/classe_search/selectors';
 
 function mapStateToProps(state) {
   return {
-    classes: Selectors.classes(state),
+    classes: Selectors.classesInBounds(state),
   };
 }
 

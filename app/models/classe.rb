@@ -39,7 +39,7 @@ class Classe < ApplicationRecord
     res = res.where(experience: params[:experiences]) unless params[:experiences].nil?
     res = res.where(certified: params[:certified]) unless params[:certified].nil?
     res = res.search_by_text(params[:searchStr]) if params[:searchStr]
-    res
+    res.uniq # Should use distinct instead of uniq for performance but conflict with textsearch
   end
   # rubocop:enable Metrics/AbcSize
 

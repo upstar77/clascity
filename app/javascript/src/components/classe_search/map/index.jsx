@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
+  Marker,
   GoogleMap,
   withGoogleMap,
   withScriptjs,
@@ -50,14 +51,24 @@ class SearchMap extends React.Component {
   }
 
   render() {
+    const { classes } = this.props;
     return (
       <GoogleMap
         ref={this.onMapMounted.bind(this)}
         defaultZoom={13}
-        defaultCenter={{ lat: 49.2834121, lng: -123.1175606 }}
+        defaultCenter={{ lat: 49.2834121, lng: -123.1175606 } /* TODO CHANGE */}
         onTilesLoaded={this.onTilesLoaded.bind(this)}
         onDragEnd={this.updatePosition.bind(this)}
-      />
+      >
+        {classes.map(classe => (
+          classe.locations.map(location => (
+            <Marker
+              key={location.id}
+              position={{ lat: location.latitude, lng: location.longitude }}
+            />
+          ))
+        ))}
+      </GoogleMap>
     );
   }
 }
@@ -78,6 +89,7 @@ MapHOC.propTypes = {
   containerElement: PropTypes.element,
   mapElement: PropTypes.element,
   onPositionUpdate: PropTypes.func.isRequired,
+  classes: PropTypes.array.isRequired,
 };
 
 export default MapHOC;

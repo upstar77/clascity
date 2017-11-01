@@ -7,6 +7,7 @@ import Map from './index';
 
 const props = {
   onPositionUpdate: action('onPositionUpdate'),
+  classes: [],
 };
 
 storiesOf('ClasseSearchMap', module)

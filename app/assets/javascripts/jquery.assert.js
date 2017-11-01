@@ -11,8 +11,6 @@
   /**
    * List of jquery function names that get monkey patched.
    *
-   * TODO what about 'first', 'last', 'offsetParent' ?
-   *
    * @type {Array}
    */
   var jqueryFunctions = ['add', 'addBack', 'andSelf', 'children', 'closest', 'end', 'eq', 'filter', 'find', 'has', 'map',
