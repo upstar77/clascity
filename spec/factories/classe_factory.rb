@@ -4,6 +4,7 @@ FactoryGirl.define do
     description 'Learn how to swim with a great teacher'
     experience :exp_2
     certified false
+    private true
     tag_names 'sport swim pool swimming'
     association :teacher, factory: :user
 

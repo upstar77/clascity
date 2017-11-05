@@ -17,6 +17,9 @@ RSpec.describe Classe, type: :model do
     # Inclusion/acceptance of values
     it { should allow_value([true, false]).for(:certified) }
     it { should_not allow_value(nil).for(:certified) }
+
+    it { should allow_value([true, false]).for(:private) }
+    it { should_not allow_value(nil).for(:private) }
   end
 
   describe "ActiveRecord associations" do
@@ -208,6 +211,30 @@ RSpec.describe Classe, type: :model do
             expect(result.count).to eq(1)
             expect(result).to include(not_certified)
             expect(result).to_not include(certified)
+          end
+        end
+
+        context "should find by private" do
+          it "if private" do
+            private = create(:classe, private: true)
+            not_private = create(:classe, private: false)
+
+            result = Classe.geo_search(city_center.merge(radius: 1000,
+                                                         private: true))
+            expect(result.count).to eq(1)
+            expect(result).to include(private)
+            expect(result).to_not include(not_private)
+          end
+
+          it "if not private" do
+            private = create(:classe, private: true)
+            not_private = create(:classe, private: false)
+
+            result = Classe.geo_search(city_center.merge(radius: 1000,
+                                                         private: false))
+            expect(result.count).to eq(1)
+            expect(result).to include(not_private)
+            expect(result).to_not include(private)
           end
         end
 

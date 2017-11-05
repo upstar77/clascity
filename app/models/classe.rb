@@ -8,6 +8,7 @@ class Classe < ApplicationRecord
   validates :description, presence: true, length: { minimum: 10 }
   validates :experience, presence: true
   validates :certified, inclusion: { in: [true, false] }
+  validates :private, inclusion: { in: [true, false] }
 
   # User
   belongs_to :teacher, class_name: 'User'
@@ -38,6 +39,7 @@ class Classe < ApplicationRecord
     res = within_box(params[:radius], params[:latitude], params[:longitude])
     res = res.where(experience: params[:experiences]) unless params[:experiences].nil?
     res = res.where(certified: params[:certified]) unless params[:certified].nil?
+    res = res.where(private: params[:private]) unless params[:private].nil?
     res = res.search_by_text(params[:searchStr]) if params[:searchStr]
     res.uniq # Should use distinct instead of uniq for performance but conflict with textsearch
   end

@@ -139,6 +139,8 @@ class SearchFilters extends React.Component {
   }
 
   renderExperienceRow() {
+    // TODO Do not match backend values (exp_1, exp_2, exp_3, exp_4 } need
+    // clarification
     const btnStyle = classNames('classe-filter__filter-btn');
     return (
       <div className="class-filter-row">

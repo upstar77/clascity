@@ -30,6 +30,7 @@ class1 = Classe.create! title: 'Swimming class',
                         description: 'Learn how to swim with a great teacher',
                         experience: :exp_2,
                         certified: false,
+                        private: true,
                         teacher: user1,
                         tag_names: 'sport swim pool swimming'
 
@@ -37,6 +38,7 @@ class2 = Classe.create! title: 'Tennis class',
                         description: 'Learn how to play tennis with a great teacher',
                         experience: :exp_4,
                         certified: false,
+                        private: true,
                         teacher: user1,
                         tag_names: 'sport tennis'
 
@@ -44,6 +46,7 @@ class3 = Classe.create! title: 'Guitar class',
                         description: 'Learn how to play guitar with a great teacher',
                         experience: :exp_4,
                         certified: true,
+                        private: false,
                         teacher: user2,
                         tag_names: 'guitar music'
 
@@ -51,6 +54,7 @@ class4 = Classe.create! title: 'Trumpet class',
                         description: 'Learn how to play trumpet with a great teacher',
                         experience: :exp_4,
                         certified: true,
+                        private: false,
                         teacher: user2,
                         tag_names: 'trumpet music'
 

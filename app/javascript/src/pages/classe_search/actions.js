@@ -25,9 +25,10 @@ export const performSearch = args => (
     searchClasses({
       longitude: centerLng,
       latitude: centerLat,
-      radius, // TODO
-      experience: null, // args.experience TODO
-      certified: null, // args.certified, TODO
+      radius,
+      experience: args.experience,
+      certified: args.certified,
+      private: args.isPrivateClasse,
       searchStr: args.searchStr,
     }).then((classes) => {
       dispatch(loadClasses(classes));

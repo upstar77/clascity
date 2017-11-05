@@ -1,5 +1,7 @@
 <h2><%= @classe.title %></h2>
 <p><%= @classe.description %></p>
+<p>Is certified: <%= @classe.certified %></p>
+<p>Is private: <%= @classe.private %></p>
 <p>
   <% if @classe.tags.any? %>
     <tr id="tags">

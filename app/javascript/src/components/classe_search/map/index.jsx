@@ -2,11 +2,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Marker,
   GoogleMap,
   withGoogleMap,
   withScriptjs,
 } from 'react-google-maps';
+
+import {
+  MarkerWithLabel,
+} from 'react-google-maps/lib/components/addons/MarkerWithLabel';
 
 class SearchMap extends React.Component {
   constructor() {
@@ -14,16 +17,16 @@ class SearchMap extends React.Component {
     this.mapReady = false;
   }
 
-  onTilesLoaded() {
+  onMapLoaded() {
     this.mapReady = true;
-    this.updatePosition();
+    this.updatePosition(true);
   }
 
   onMapMounted(ref) {
     this.map = ref;
   }
 
-  updatePosition() {
+  updatePosition(shouldPerformSearch) {
     if (!this.mapReady) {
       return;
     }
@@ -33,18 +36,21 @@ class SearchMap extends React.Component {
     const boundNorthEast = bounds.getNorthEast();
     const boundSouthWest = bounds.getSouthWest();
     this.props.onPositionUpdate({
-      center: {
-        longitude: center.lng(),
-        latitude:  center.lat(),
-      },
-      bounds: {
-        ne: {
-          longitude: boundNorthEast.lng(),
-          latitude:  boundNorthEast.lat(),
+      shouldPerformSearch,
+      newPosition: {
+        center: {
+          longitude: center.lng(),
+          latitude:  center.lat(),
         },
-        sw: {
-          longitude: boundSouthWest.lng(),
-          latitude:  boundSouthWest.lat(),
+        bounds: {
+          ne: {
+            longitude: boundNorthEast.lng(),
+            latitude:  boundNorthEast.lat(),
+          },
+          sw: {
+            longitude: boundSouthWest.lng(),
+            latitude:  boundSouthWest.lat(),
+          },
         },
       },
     });
@@ -57,15 +63,19 @@ class SearchMap extends React.Component {
         ref={this.onMapMounted.bind(this)}
         defaultZoom={13}
         defaultCenter={{ lat: 49.2834121, lng: -123.1175606 } /* TODO CHANGE */}
-        onTilesLoaded={this.onTilesLoaded.bind(this)}
+        onTilesLoaded={this.onMapLoaded.bind(this)}
         onDragEnd={this.updatePosition.bind(this)}
       >
         {classes.map(classe => (
           classe.locations.map(location => (
-            <Marker
+            <MarkerWithLabel
               key={location.id}
               position={{ lat: location.latitude, lng: location.longitude }}
-            />
+              labelAnchor={new google.maps.Point(0, 0)}
+              labelStyle={{ backgroundColor: 'white', fontSize: '10px', padding: '5px' }}
+            >
+              <div>{classe.title}</div>
+            </MarkerWithLabel>
           ))
         ))}
       </GoogleMap>

@@ -57,7 +57,7 @@ class ClassesController < ApplicationController
   def classe_params
     # Classe params
     params.require(:classe).permit(
-      :title, :description, :tag_names, :experience, :certified,
+      :title, :description, :tag_names, :experience, :certified, :private,
       locations_attributes:
         [:address, :city, :postal_code, :state, :state_code, :country_code,
          :longitude, :latitude]
