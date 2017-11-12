@@ -32,6 +32,7 @@ class SearchFilters extends React.Component {
     const { isPrivateClasse } = this.props;
     const isPrivateClick = this.onFilterChange.bind(
       this,
+
       'isPrivateClasse',
       isPrivateClasse === true ? null : true,
     );
