@@ -1,0 +1,48 @@
+.dot-navigation-block {
+  position: absolute;
+  top: 600px;
+  right: 40px;
+  z-index: 2;
+  padding: 3px 12px;
+  background-color: white;
+  border-radius: 2.5px
+}
+
+.dot-navigation-block ul {
+  margin: 0;
+  padding: 0;
+  list-style: none
+}
+
+.dot-navigation-block ul li {
+  display: block;
+  margin: 8px 0;
+  line-height: 0;
+}
+
+.dot-navigation-block ul li a {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none
+}
+
+.dot-navigation-block ul li a .__circle {
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  background-color: #BFBFBF;
+  border-radius: 50%;
+  position: relative;
+  top: 0
+}
+
+.dot-navigation-block ul li.active .__circle {
+  background-color: #43A047;
+  border-color: #fff
+}
+
+.container-block {
+  width: 100%;
+  height: auto;
+  position: relative
+}

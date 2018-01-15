@@ -1,0 +1,200 @@
+/* Default custom select styles */
+div.cs-select {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	text-align: left;
+	background: #fff;
+	z-index: 10;
+	width: 100%;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+div.cs-select:focus {
+	outline: none; /* For better accessibility add a style for this in your skin */
+}
+
+.cs-select select {
+	display: none;
+}
+
+.cs-select span {
+	display: block;
+	position: relative;
+	cursor: pointer;
+	padding: 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size:14.5px;
+	color: #454545;
+}
+
+/* Placeholder and selected option */
+.cs-select > span {
+	padding-right: 3em;
+}
+
+.cs-select > span::after,
+.cs-select .cs-selected span::after {
+	speak: none;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.cs-select > span::after {
+	content: '\25BE';
+	right: 1em;
+}
+
+.cs-select .cs-selected span::after {
+	content: '\2713';
+	margin-left: 1em;
+}
+
+.cs-select.cs-active > span::after {
+	-webkit-transform: translateY(-50%) rotate(180deg);
+	transform: translateY(-50%) rotate(180deg);
+}
+
+div.cs-active {
+	z-index: 200;
+}
+
+/* Options */
+.cs-select .cs-options {
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	background: #fff;
+	border-radius: 3px;
+	margin-top: 5px;
+	visibility: hidden;
+	box-sizing: border-box;
+	border:1px solid #e2e2e2;
+	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08);
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08);
+}
+
+.cs-select.cs-active .cs-options {
+	visibility: visible;
+}
+
+.cs-select ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.cs-select ul span {
+	padding: 1em;
+}
+
+.cs-select ul li.cs-focus span {
+	background-color: #ddd;
+}
+
+/* Optgroup and optgroup label */
+.cs-select li.cs-optgroup ul {
+	padding-left: 1em;
+}
+
+.cs-select li.cs-optgroup > span {
+	cursor: default;
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('http://localhost:9000/css/fonts/icomoon/icomoon.eot?-rdnm34');
+	src:url('http://localhost:9000/css/fonts/icomoon/icomoon.eot?') format('embedded-opentype'),
+		url('http://localhost:9000/css/fonts/icomoon/icomoon.woff?-rdnm34') format('woff'),
+		url('http://localhost:9000/css/fonts/icomoon/icomoon.ttf?-rdnm34') format('truetype') 
+		url('http://localhost:9000/css/fonts/icomoon/icomoon.svg?-rdnm34') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+div.cs-select-style {
+	background: transparent;
+}
+
+@media screen and (max-width: 30em) {
+	div.cs-select-style { font-size: 1em; }
+}
+
+.cs-select-style > span {
+	border: 1px solid #e2e2e2;
+	width: 100%;
+	color:#454545;
+	font-family:geomanist;
+	padding: 5px 15px;
+	box-sizing: border-box;
+	line-height: 25px;
+	font-size:14.5px;
+	border-radius:3px;
+	height: 35px;
+	margin:8px 0 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: url("../../img/icon-arrow-down.svg") no-repeat right 15px center;
+}
+
+.cs-field-error > span {
+	border: 1px solid #FF5B5B !important;
+}
+.cs-select-style > span::after,
+.cs-select-style .cs-selected span::after {
+	display: none;
+}
+
+.cs-select-style ul span::after {
+	display: none;
+}
+
+.cs-select-style .cs-selected span::after {
+	display: none;
+}
+
+.cs-select-style.cs-active > span {
+	background: #fff;
+	background: url("../../img/icon-arrow-up.svg") no-repeat right 15px center;
+	border: 1px solid #e2e2e2;
+	color: #28A8E0;
+}
+
+.cs-select-style .cs-options {
+	color: #2980b9;
+	padding: 5px 0;
+	opacity: 0;
+	-webkit-transition: opacity 0.2s, visibility 0s 0.2s;
+	transition: opacity 0.2s, visibility 0s 0.2s;
+}
+
+.cs-select-style.cs-active .cs-options {
+	opacity: 1;
+	-webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+
+.cs-select-style ul span {
+	padding: 0 15px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.cs-select-style .cs-options li span:hover,
+.cs-select-style li.cs-focus span {
+	background: #F3F3F3;
+}
+
