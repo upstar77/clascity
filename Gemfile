@@ -64,6 +64,8 @@ gem 'hairtrigger', '~> 0.2.20'
 
 gem 'active_model_serializers', '~> 0.10.6'
 
+gem "slim-rails"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop executionand get a debugger
   # console
