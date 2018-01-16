@@ -9,7 +9,7 @@
         .dropdown
           .dropdown-toggle(data-toggle='dropdown')
             .user-image
-              img src=asset_path("image-userProfile-Claudia.png")
+              img src=asset_path("vendor/image-userProfile-Claudia.png")
           ul.dropdown-menu
             li
               a(href="#") Dashboard
@@ -25,31 +25,33 @@
               .count
                 span
                   |6
-              img src=asset_path("icon-nav-notification.svg")
+              img src=asset_path("vendor/icon-nav-notification.svg")
           .dropdown-menu(onmouseover="document.body.style.overflow='hidden';", onmouseout="document.body.style.overflow='auto';")
             .card-content-message
               .card-title.has-textLink
-                h4 Messages
+                h4
+                  | Messages
                   label
                     |(4)
-                a(href="/dashboard/dashboard-inbox/message")
+                a(href="#")
                   p See all
               .rows-active
                 .content-row
-                  a(href="/dashboard/dashboard-inbox/message/message-inside")
+                  a(href="#")
                     .user-image.small
-                      img src=asset_path("image-userProfile-Alice-2.png")
-                      .content-title
-                        h5 Alice Barnett
-                        label 3 days ago
-                        p Nam felis diam, congue vel sollicitudin hendrerit, pulvinar vel est.
+                      img src=asset_path("vendor/image-userProfile-Alice-2.png")
+                    .content-title
+                      h5 Alice Barnett
+                      label 3 days ago
+                      p Nam felis diam, congue vel sollicitudin hendrerit, pulvinar vel est.
 
             .card-content-pair
               .card-title.has-textLink
-                h4 Notificaitons
+                h4
+                  | Notificaitons
                   label
                     |(5)
-                a(href="/dashboard/dashboard-inbox/notification")
+                a(href="#")
                   p See all
               .rows-active
                 .content-row
@@ -87,9 +89,9 @@
                         p Don’t forget you have a lesson with Alice Barnett on April 26
                     .col-xs-12.col-md-3
                       label 27 Jun 2017
-        a(href="/calendar")
+        a(href="#")
           .incoming.header-calendar
-            img src=asset_path("icon-nav-calendar.svg")
+            img src=asset_path("vendor/icon-nav-calendar.svg")
       ul.nav-item
         a(href="#")
           li Search a class
@@ -105,10 +107,10 @@
   .row
     .col-xs-12
       .logo
-        a(href="/")
+        a(href=root_path)
           img src=asset_path("clascity-logo.svg")
       .menu-button
-        img src=asset_path("icon-menu-btn.svg")
+        img src=asset_path("vendor/icon-menu-btn.svg")
       ul.nav-item
         a(href="#")
           li Search a class
