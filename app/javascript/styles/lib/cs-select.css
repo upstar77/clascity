@@ -113,17 +113,6 @@ div.cs-active {
 	cursor: default;
 }
 
-@font-face {
-	font-family: 'icomoon';
-	src:url('http://localhost:9000/css/fonts/icomoon/icomoon.eot?-rdnm34');
-	src:url('http://localhost:9000/css/fonts/icomoon/icomoon.eot?') format('embedded-opentype'),
-		url('http://localhost:9000/css/fonts/icomoon/icomoon.woff?-rdnm34') format('woff'),
-		url('http://localhost:9000/css/fonts/icomoon/icomoon.ttf?-rdnm34') format('truetype') 
-		url('http://localhost:9000/css/fonts/icomoon/icomoon.svg?-rdnm34') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
 div.cs-select-style {
 	background: transparent;
 }
@@ -147,7 +136,7 @@ div.cs-select-style {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
-	background: url("../../img/icon-arrow-down.svg") no-repeat right 15px center;
+	background: url("/img/icon-arrow-down.svg") no-repeat right 15px center;
 }
 
 .cs-field-error > span {
@@ -168,7 +157,7 @@ div.cs-select-style {
 
 .cs-select-style.cs-active > span {
 	background: #fff;
-	background: url("../../img/icon-arrow-up.svg") no-repeat right 15px center;
+	background: url("/img/icon-arrow-up.svg") no-repeat right 15px center;
 	border: 1px solid #e2e2e2;
 	color: #28A8E0;
 }

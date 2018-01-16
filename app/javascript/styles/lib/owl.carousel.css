@@ -59,7 +59,7 @@
     border-bottom-right-radius: 2px;
     border-top-right-radius: 2px;
     padding:0;
-    background: #262626 url(../../img/icon-arrow-left-white.svg) center no-repeat;
+    background: #262626 url(/img/icon-arrow-left-white.svg) center no-repeat;
     text-indent: 99999px;
     transition:0.3s;
   }
@@ -77,15 +77,15 @@
     border-bottom-left-radius: 2px;
     border-top-left-radius: 2px;
     padding:0;
-    background: #262626 url(../../img/icon-arrow-right-white.svg) center no-repeat;
+    background: #262626 url(/img/icon-arrow-right-white.svg) center no-repeat;
     text-indent: 99999px;
     transition:0.3s;
    }
    .owl-carousel.class-slider .owl-nav .owl-prev:hover{
-    background: #ee592a url(../../img/icon-arrow-left-white.svg) center no-repeat;
+    background: #ee592a url(/img/icon-arrow-left-white.svg) center no-repeat;
    }
    .owl-carousel.class-slider .owl-nav .owl-next:hover{
-      background: #ee592a url(../../img/icon-arrow-right-white.svg) center no-repeat;
+      background: #ee592a url(/img/icon-arrow-right-white.svg) center no-repeat;
     }
    @media only screen and (max-width: 48em){
     .owl-carousel.slider-style-two .owl-nav .owl-next{
@@ -203,7 +203,6 @@
   top: 50%;
   margin-left: -40px;
   margin-top: -40px;
-  background: url("http://localhost:9000/css/lib/owl.video.play.png") no-repeat;
   cursor: pointer;
   z-index: 1;
   -webkit-backface-visibility: hidden;

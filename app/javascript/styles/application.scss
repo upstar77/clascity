@@ -1,22 +1,23 @@
-@import "~bootstrap/dist/css/bootstrap.css";
 @import "buttons";
 @import "topbar";
-@import "classes";
 @import "classe_filters";
+
+// libs
+@import "lib/table";
+@import "lib/gallery";
+@import "lib/bootstrap";
+@import "lib/owl.carousel";
+@import "lib/owl.transitions";
+@import "lib/flexboxgrid";
+@import "lib/owl.theme";
+@import "lib/sectionscroll";
+@import "lib/menu";
+@import "lib/tooltips";
+@import "lib/animate";
+@import "lib/switch";
+@import "lib/jquery-ui";
+@import "lib/cs-select";
 @import "style";
 
-body {
-  color: #454545;
-  background-color: #f5f5f5;
-  font-family: geomanist;
-}
-
-a {
-  text-decoration: none;
-  color: #454545;
-
-  &:hover {
-    color: #454545;
-  }
-}
-
+// pages
+@import "pages/classes";
