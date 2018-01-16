@@ -1,0 +1,20 @@
+#class-add-location-modal.modal.fade[role="dialog"]
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close[type="button" data-dismiss="modal"]
+          | ×
+        h4.modal-title
+          | Add an address
+      .modal-body
+        .js-modal-location-errors
+
+        .js-modal-location-search-address
+          = render 'locations/search_form'
+        .js-modal-location-confirm-position
+          = render 'locations/confirm_position'
+      .modal-footer
+        button.btn.btn-default.js-modal-location-back[type="button"]
+          | Back
+        button.btn.js-modal-location-next[type="button"]
+          | Next

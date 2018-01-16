@@ -1,0 +1,11 @@
+h2
+  | Sign up
+= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+  .form-inputs
+    = f.input :email, required: true
+    = render "users/password_fields", user: @user, f: f
+    = render "users/basic_info_fields", user: @user, f: f
+    = render "users/avatar_fields", user: @user, f: f
+  .form-actions
+    = f.button :submit, "Sign up"
+= render "devise/shared/links"

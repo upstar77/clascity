@@ -1,0 +1,17 @@
+form.js-search-location-form
+  div
+    =label_tag 'Country'
+    = country_select nil, :country, {selected: current_user.country_code}, class:
+    - 'js-select-country_code'
+  div
+    =label_tag 'City'
+    =text_field_tag 'city', current_user.city.capitalize, class: 'js-input-city'
+  div
+    =label_tag 'Street address'
+    =text_field_tag 'street_address', nil, class: 'js-input-street_address'
+  div
+    =label_tag 'State / Province'
+    =text_field_tag 'state', nil, class: 'js-input-state'
+  div
+    =label_tag 'Postal Code'
+    =text_field_tag 'postal_code', nil, class: 'js-input-postal_code'

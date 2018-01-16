@@ -1,0 +1,18 @@
+h2
+  | User profile
+h4
+  = @user.first_name
+- confidential_data @user do
+  div
+    | Full name: 
+    = @user.first_name + ' ' + @user.last_name
+div
+  | City: 
+  = @user.city
+div
+  | Country code: 
+  = @user.country_code
+div
+  = image_tag current_user.avatar.url, :style => "width:200px; height:200px;"
+- if policy(@user).update?
+  = link_to "Edit user", edit_user_path
