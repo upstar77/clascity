@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="37px" viewBox="0 0 34 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2 Copy 11</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-11.7%" y="-7.7%" width="123.3%" height="123.1%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.550010629   0 0 0 0 0.550010629   0 0 0 0 0.550010629  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Search-a-class" transform="translate(-976.000000, -555.000000)">
+            <g id="Group-2-Copy-11" transform="translate(978.000000, 556.500000)">
+                <g id="Group" filter="url(#filter-1)">
+                    <rect id="Rectangle-4" fill="#28A8E0" x="0" y="0" width="30" height="30" rx="2.5"></rect>
+                    <g id="camera.13" transform="translate(7.500000, 8.500000)" fill-rule="nonzero" fill="#FFFFFF">
+                        <g id="Layer_1">
+                            <path d="M12.75,2 L11.5,2 L11.5,1.75 C11.5,0.785 10.715,0 9.75,0 L5.25,0 C4.285,0 3.5,0.785 3.5,1.75 L3.5,2 L2.5,2 L2.5,1.75 C2.5,1.612 2.388,1.5 2.25,1.5 L1.75,1.5 C1.612,1.5 1.5,1.612 1.5,1.75 L1.5,2.138 C0.629,2.4485 0,3.2735 0,4.25 L0,10.75 C0,11.9905 1.0095,13 2.25,13 L12.75,13 C13.9905,13 15,11.9905 15,10.75 L15,4.25 C15,3.0095 13.9905,2 12.75,2 Z M5.25,2 L9.75,2 C9.888,2 10,2.112 10,2.25 C10,2.388 9.888,2.5 9.75,2.5 L5.25,2.5 C5.112,2.5 5,2.388 5,2.25 C5,2.112 5.112,2 5.25,2 Z M7.5,11.5 C5.57,11.5 4,9.93 4,8 C4,6.07 5.57,4.5 7.5,4.5 C9.43,4.5 11,6.07 11,8 C11,9.93 9.43,11.5 7.5,11.5 Z M14,5.25 C14,5.388 13.888,5.5 13.75,5.5 L12.25,5.5 C12.112,5.5 12,5.388 12,5.25 L12,3.75 C12,3.612 12.112,3.5 12.25,3.5 L13.75,3.5 C13.888,3.5 14,3.612 14,3.75 L14,5.25 Z M7.5,5 C5.8455,5 4.5,6.3455 4.5,8 C4.5,9.6545 5.8455,11 7.5,11 C9.1545,11 10.5,9.6545 10.5,8 C10.5,6.3455 9.1545,5 7.5,5 Z M7.5,10.5 C6.1215,10.5 5,9.3785 5,8 C5,6.6215 6.1215,5.5 7.5,5.5 C8.8785,5.5 10,6.6215 10,8 C10,9.3785 8.8785,10.5 7.5,10.5 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                    <path d="M13.7727379,33.6025792 L13.7727379,27.8902839 C13.7727379,27.7503966 13.8154742,27.6225685 13.8860479,27.5553813 C13.9587781,27.4757902 14.0507199,27.4826812 14.1195293,27.5715751 L16.6237203,30.4192813 C16.6909614,30.4854349 16.7307571,30.6132629 16.7270324,30.7490157 C16.7286007,30.8851129 16.689393,31.012941 16.6237203,31.0842629 L14.1195293,33.9226661 C14.0836543,33.9657349 14.0422903,33.9915762 13.9985738,33.9995008 C13.9579939,34.0036354 13.9181982,33.9819288 13.8852638,33.9402382 C13.81469,33.8730509 13.7719537,33.7424665 13.7727379,33.6025792 Z" id="Page-1" fill="#28A8E0" transform="translate(15.250000, 30.750000) rotate(-270.000000) translate(-15.250000, -30.750000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

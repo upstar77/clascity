@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="110px" height="111px" viewBox="0 0 110 111" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>verify-phone</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="popups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Profile-account-verification" transform="translate(-665.000000, -627.000000)">
+            <g id="Group-3" transform="translate(385.000000, 562.000000)">
+                <g id="verify-phone" transform="translate(280.000000, 65.500000)">
+                    <circle id="Oval-Copy" fill="#EC592A" cx="55" cy="55" r="55"></circle>
+                    <g id="iphone" transform="translate(41.000000, 30.000000)" fill-rule="nonzero" fill="#FFFFFF">
+                        <path d="M21,6 L7,6 C6.44771525,6 6,6.44771525 6,7 C6,7.55228475 6.44771525,8 7,8 L21,8 C21.5522847,8 22,7.55228475 22,7 C22,6.44771525 21.5522847,6 21,6 Z" id="Shape"></path>
+                        <path d="M25,0 L3,0 C1.34387685,0.00176371092 0.00176371092,1.34387685 0,3 L0,47 C0.00176371092,48.6561231 1.34387685,49.9982363 3,50 L25,50 C26.6561231,49.9982363 27.9982363,48.6561231 28,47 L28,3 C27.9982363,1.34387685 26.6561231,0.00176371092 25,0 Z M14,46 C12.8954305,46 12,45.1045695 12,44 C12,42.8954305 12.8954305,42 14,42 C15.1045695,42 16,42.8954305 16,44 C16,45.1045695 15.1045695,46 14,46 Z M26,38 L2,38 L2,3 C2,2.44771525 2.44771525,2 3,2 L25,2 C25.5522847,2 26,2.44771525 26,3 L26,38 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

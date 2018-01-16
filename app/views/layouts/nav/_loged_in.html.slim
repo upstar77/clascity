@@ -1,0 +1,130 @@
+.navbar
+  .row
+    .col-xs-2
+      a(href=root_path)
+        = image_tag 'clascity-logo.svg', class: 'logo'
+    .col-xs-10
+      .nav-userSetting
+        span.user-name= current_user.decorate.name
+        .dropdown
+          .dropdown-toggle(data-toggle='dropdown')
+            .user-image
+              img src=asset_path("image-userProfile-Claudia.png")
+          ul.dropdown-menu
+            li
+              a(href="#") Dashboard
+              a(href="#") Profile
+              a(href="#") Account settings
+              = link_to destroy_user_session_path, method: :delete do
+                | Logout
+
+      .nav-incoming
+        .dropdown
+          .dropdown-toggle(data-toggle='dropdown')
+            .incoming.header-notification.new
+              .count
+                span
+                  |6
+              img src=asset_path("icon-nav-notification.svg")
+          .dropdown-menu(onmouseover="document.body.style.overflow='hidden';", onmouseout="document.body.style.overflow='auto';")
+            .card-content-message
+              .card-title.has-textLink
+                h4 Messages
+                  label
+                    |(4)
+                a(href="/dashboard/dashboard-inbox/message")
+                  p See all
+              .rows-active
+                .content-row
+                  a(href="/dashboard/dashboard-inbox/message/message-inside")
+                    .user-image.small
+                      img src=asset_path("image-userProfile-Alice-2.png")
+                      .content-title
+                        h5 Alice Barnett
+                        label 3 days ago
+                        p Nam felis diam, congue vel sollicitudin hendrerit, pulvinar vel est.
+
+            .card-content-pair
+              .card-title.has-textLink
+                h4 Notificaitons
+                  label
+                    |(5)
+                a(href="/dashboard/dashboard-inbox/notification")
+                  p See all
+              .rows-active
+                .content-row
+                  .row
+                    .col-xs-12.col-md-9
+                      a(href="#")
+                        p Florence Buchanan requested to book your class “Piano and Music Theory”.
+                    .col-xs-12.col-md-3
+                      label 31 Aug 2017
+                .content-row
+                  .row
+                    .col-xs-12.col-md-9
+                      a(href="#")
+                        p Charlotte Cooper just leave you a feedback.
+                    .col-xs-12.col-md-3
+                      label 21 Sep 2017
+                .content-row
+                  .row
+                    .col-xs-12.col-md-9
+                      a(href="#")
+                        p You just finish a lesson with Alice Barnett, did he achieve the objective?
+                    .col-xs-12.col-md-3
+                      label 25 Dec 2017
+                .content-row
+                  .row
+                    .col-xs-12.col-md-9
+                      a(href="#")
+                        p Don’t forget you have a lesson with Alice Barnett on April 26
+                    .col-xs-12.col-md-3
+                      label 27 Jun 2017
+                .content-row
+                  .row
+                    .col-xs-12.col-md-9
+                      a(href="#")
+                        p Don’t forget you have a lesson with Alice Barnett on April 26
+                    .col-xs-12.col-md-3
+                      label 27 Jun 2017
+        a(href="/calendar")
+          .incoming.header-calendar
+            img src=asset_path("icon-nav-calendar.svg")
+      ul.nav-item
+        a(href="#")
+          li Search a class
+        a(href="#")
+          li My classes
+        a(href="#")
+          li Help
+        a(href="#")
+          li
+            button
+              |Create a class
+.navbar-mobile
+  .row
+    .col-xs-12
+      .logo
+        a(href="/")
+          img src=asset_path("clascity-logo.svg")
+      .menu-button
+        img src=asset_path("icon-menu-btn.svg")
+      ul.nav-item
+        a(href="#")
+          li Search a class
+        a(href="#")
+          li My classes
+        a(href="#")
+          li Upcoming classes
+        a(href="#")
+          li Messages
+        a(href="#")
+          li Notificaitons
+        a(href="#")
+          li Dashboard
+        a(href="#")
+          li Help
+        a(href="#")
+          li
+            button.large
+              |Create a class

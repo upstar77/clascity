@@ -66,6 +66,9 @@ gem 'active_model_serializers', '~> 0.10.6'
 
 gem "slim-rails"
 
+gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'
+gem 'draper', '~>  3.0.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop executionand get a debugger
   # console

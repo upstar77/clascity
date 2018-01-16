@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="37px" viewBox="0 0 34 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2 Copy 14</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-11.7%" y="-7.7%" width="123.3%" height="123.1%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.550010629   0 0 0 0 0.550010629   0 0 0 0 0.550010629  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Search-a-class" transform="translate(-703.000000, -692.000000)">
+            <g id="Group-2-Copy-14" transform="translate(705.000000, 693.500000)">
+                <g id="Group" filter="url(#filter-1)">
+                    <rect id="Rectangle-4" fill="#EE592A" x="0" y="0" width="30" height="30" rx="2.5"></rect>
+                    <g id="Page-1" transform="translate(9.500000, 7.500000)" fill="#FFFFFF">
+                        <polygon id="Fill-1" points="1.17857143 3.75 2.78571429 3.75 2.78571429 0 1.17857143 0"></polygon>
+                        <path d="M2.25,9.10714286 L2.25,4.28571429 L1.71428571,4.28571429 L1.71428571,9.10714286 L0.107142857,9.10714286 L0.107142857,15 L3.85714286,15 L3.85714286,9.10714286 L2.25,9.10714286 Z M1.17857143,13.9285714 L0.642857143,13.9285714 L0.642857143,10.1785714 L1.17857143,10.1785714 L1.17857143,13.9285714 Z M2.25,13.9285714 L1.71428571,13.9285714 L1.71428571,10.1785714 L2.25,10.1785714 L2.25,13.9285714 Z M3.32142857,13.9285714 L2.78571429,13.9285714 L2.78571429,10.1785714 L3.32142857,10.1785714 L3.32142857,13.9285714 Z" id="Fill-2"></path>
+                        <polygon id="Fill-3" points="7.60714286 3.75 9.21428571 3.75 9.21428571 0 7.60714286 0"></polygon>
+                        <path d="M8.67857143,9.12042857 L8.67857143,4.28571429 L8.14285714,4.28571429 L8.14285714,9.12042857 C6.64114286,9.25607143 5.46428571,10.5158571 5.46428571,12.0535714 C5.46428571,13.6808571 6.78342857,15 8.41071429,15 C10.038,15 11.3571429,13.6808571 11.3571429,12.0535714 C11.3571429,10.5167143 10.1802857,9.25607143 8.67857143,9.12042857 Z" id="Fill-4"></path>
+                    </g>
+                    <path d="M13.7727379,33.6025792 L13.7727379,27.8902839 C13.7727379,27.7503966 13.8154742,27.6225685 13.8860479,27.5553813 C13.9587781,27.4757902 14.0507199,27.4826812 14.1195293,27.5715751 L16.6237203,30.4192813 C16.6909614,30.4854349 16.7307571,30.6132629 16.7270324,30.7490157 C16.7286007,30.8851129 16.689393,31.012941 16.6237203,31.0842629 L14.1195293,33.9226661 C14.0836543,33.9657349 14.0422903,33.9915762 13.9985738,33.9995008 C13.9579939,34.0036354 13.9181982,33.9819288 13.8852638,33.9402382 C13.81469,33.8730509 13.7719537,33.7424665 13.7727379,33.6025792 Z" id="Page-1" fill="#EE592A" transform="translate(15.250000, 30.750000) rotate(-270.000000) translate(-15.250000, -30.750000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

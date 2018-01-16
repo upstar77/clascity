@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="51px" viewBox="0 0 50 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 13</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Profile-account-verification" transform="translate(-701.000000, -415.000000)">
+            <g id="Group-13" transform="translate(701.000000, 415.000000)">
+                <circle id="Oval-8-Copy" fill="#395185" cx="25" cy="25.5" r="25"></circle>
+                <g id="facebook" transform="translate(18.500000, 13.000000)" fill-rule="nonzero" fill="#FFFFFF">
+                    <path d="M8.42692881,25 L8.42692881,13.5963439 L12.2547576,13.5963439 L12.8278334,9.15218832 L8.42692881,9.15218832 L8.42692881,6.31464645 C8.42692881,5.02792911 8.78432473,4.15106103 10.6295091,4.15106103 L12.9828928,4.15002577 L12.9828928,0.175189568 C12.5756893,0.121010785 11.1787739,0 9.55364045,0 C6.16050723,0 3.83760629,2.07110189 3.83760629,5.87465951 L3.83760629,9.15218832 L0,9.15218832 L0,13.5963439 L3.83760629,13.5963439 L3.83760629,25 L8.42692881,25" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="37px" viewBox="0 0 34 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-11.7%" y="-7.7%" width="123.3%" height="123.1%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.550010629   0 0 0 0 0.550010629   0 0 0 0 0.550010629  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Search-a-class" transform="translate(-962.000000, -430.000000)">
+            <g id="Group-5" transform="translate(964.000000, 431.500000)">
+                <g id="Group-2-Copy-16" fill="#ED592A">
+                    <g id="Group" filter="url(#filter-1)">
+                        <rect id="Rectangle-4" x="0" y="0" width="30" height="30" rx="2.5"></rect>
+                        <path d="M13.7727379,33.6025792 L13.7727379,27.8902839 C13.7727379,27.7503966 13.8154742,27.6225685 13.8860479,27.5553813 C13.9587781,27.4757902 14.0507199,27.4826812 14.1195293,27.5715751 L16.6237203,30.4192813 C16.6909614,30.4854349 16.7307571,30.6132629 16.7270324,30.7490157 C16.7286007,30.8851129 16.689393,31.012941 16.6237203,31.0842629 L14.1195293,33.9226661 C14.0836543,33.9657349 14.0422903,33.9915762 13.9985738,33.9995008 C13.9579939,34.0036354 13.9181982,33.9819288 13.8852638,33.9402382 C13.81469,33.8730509 13.7719537,33.7424665 13.7727379,33.6025792 Z" id="Page-1" transform="translate(15.250000, 30.750000) rotate(-270.000000) translate(-15.250000, -30.750000) "></path>
+                    </g>
+                </g>
+                <g id="tennis-ball" transform="translate(7.500000, 7.500000)" fill-rule="nonzero" fill="#FFFFFF">
+                    <g id="Layer_1">
+                        <g id="Group">
+                            <path d="M14.5,7.75 C10.8,7.75 7.75,10.8 7.75,14.5 L7.75,14.75 C11.55,14.6 14.6,11.55 14.7,7.8 C14.65,7.75 14.6,7.75 14.5,7.75 Z" id="Shape"></path>
+                            <path d="M7.25,14.5 C7.25,10.5 10.5,7.25 14.5,7.25 L14.75,7.25 C14.65,3.45 11.55,0.35 7.75,0.25 L7.75,0.5 C7.75,4.5 4.5,7.75 0.5,7.75 L0.25,7.75 C0.35,11.55 3.45,14.65 7.25,14.75 L7.25,14.5 Z" id="Shape"></path>
+                            <path d="M0.25,7.25 L0.5,7.25 C4.2,7.25 7.25,4.2 7.25,0.5 L7.25,0.25 C3.45,0.4 0.4,3.45 0.25,7.25 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
