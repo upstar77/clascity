@@ -15,4 +15,5 @@
 //= require jquery_ujs
 //= require popper
 //= require cocoon
+//= require vendor
 //= require ./jquery.assert
