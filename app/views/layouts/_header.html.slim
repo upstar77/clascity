@@ -1,0 +1,9 @@
+header
+  - if current_user
+    .loggedIn
+      .container-fluid
+        = render 'layouts/nav/loged_in'
+  - else
+    .loggedOut
+      .container-fluid
+        = render 'layouts/nav/not_loged_in'

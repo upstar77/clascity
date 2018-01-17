@@ -1,0 +1,398 @@
+section.inside-page-wrapper
+  .container-fluid
+    .row.center-xs
+      .col-xs-12.col-md-8.col-lg-7
+        .card-content-default.card.large-card.padding-bottom-l.margin-bottom-m
+          .card-title
+            h4
+              | Basic info
+              label (Required)
+          .content-form
+            .row
+              .col-xs-12.col-md-9
+                p
+                  | Class title
+                  label (keep it short and precise, 160 words max)
+                input name="Class title" type="text" /
+              .col-xs-12.col-md-3
+                p Select a category
+                select.cs-select.cs-select-style
+                  option disabled="disabled" selected="selected" value=""  Select a category
+                  option value="Sport"  Academic Tutoring
+                  option value="Sport"  Computer Skills
+                  option value="Sport"  Sports & Fitness
+                  option value="Sport"  Language
+                  option value="Sport"  Music
+                  option value="Sport"  Performing Arts
+                  option value="Sport"  Visual Arts
+                  option value="Sport"  Digital Media
+                  option value="Sport"  Cookery
+                  option value="Sport"  Finance & Business
+                  option value="Other"  Other
+              .col-xs-12
+                p
+                  | Add tags to your class for better search result
+                  label (separate tags by “,”)
+                input name="tags" type="text" /
+              .col-xs-12
+                p Class overview
+                textarea.textarea-l name="class-overview" type="textarea"
+              .col-xs-12.col-sm-6
+                p Year of experience
+                select.cs-select.cs-select-style
+                  option value="0"  No experience
+                  option value="1"  1 year
+                  option value="2"  2 years
+                  option value="3"  3 years
+                  option value="4"  4 years
+                  option value="5+"  5+ years
+                  option value="10"  10+ years
+              .col-xs-12.col-sm-6
+                p
+                  | Are you a certified teacher?
+                  span.tooltip-trigger data-placement="top" data-toggle="tooltip" title="You don't need to send us your certificate), however, your student may request such documents when they book your class."
+                select.cs-select.cs-select-style
+                  option value="No"  No
+                  option value="Yes"  Yes
+        .card-content-default.card.large-card.padding-bottom-l.margin-bottom-m
+          .card-title
+            h4
+              | Booking configurations
+              label (Required)
+          .content-title-form
+            h5
+              | Class Location
+            .tooltip-trigger data-placement="top" data-toggle="tooltip" title="We will not display the exact location on the map until the class booking request is confirmed by you. You may also add more than one location by clicking the + icon"
+          .content-form
+            .row
+              .col-xs-12.col-sm-11
+                #duplicate-content-location.content-duplicate-row
+                  .row
+                    .col-xs-12.col-sm-9
+                      p Street Address
+                      input name="street" type="text" /
+                    .col-xs-12.col-sm-3
+                      p
+                        | Apt, Suite
+                        label (optional)
+                      input name="Apt" type="text" /
+                    .col-xs-12.col-sm-3
+                      p Country
+                      input name="Country" type="text" /
+                    .col-xs-12.col-sm-3
+                      p Town / City
+                      input name="Town" type="text" /
+                    .col-xs-12.col-sm-3
+                      p Province
+                      input name="Province" type="text" /
+                    .col-xs-12.col-sm-3
+                      p Postal Code / Zip
+                      input name="Postal Code" type="text" /
+              .col-xs-12.col-sm-1
+                #duplicate-location onlick="duplicate"
+                  button.line.plus
+            .content-title-form
+              h5
+                | When are you available to teach?
+              .tooltip-trigger data-placement="top" data-toggle="tooltip" title="Leave 'To day' empty if you'd like to set schedule on a single day. Click 'plus' if you'd like to add more than one schedule."
+              .checkbox
+                input type="checkbox" /
+                p Set as default for all my classes
+            .row
+              .col-xs-12.col-sm-11
+                .content-duplicate-row
+                  .row
+                    .col-xs-12.col-sm-3
+                      p From day
+                      select.cs-select.cs-select-style
+                        option disabled="disabled" selected="selected" value=""
+                        option value="Monday"  Monday
+                        option value="Tuesday"  Tuesday
+                        option value="Wednesday"  Wednesday
+                        option value="Thursday"  Thursday
+                        option value="Friday"  Friday
+                        option value="Saturday"  Saturday
+                        option value="Sunday"  Sunday
+                    .col-xs-12.col-sm-3
+                      p To day
+                      select.cs-select.cs-select-style
+                        option disabled="disabled" selected="selected" value=""
+                        option value="Monday"  Monday
+                        option value="Tuesday"  Tuesday
+                        option value="Wednesday"  Wednesday
+                        option value="Thursday"  Thursday
+                        option value="Friday"  Friday
+                        option value="Saturday"  Saturday
+                        option value="Sunday"  Sunday
+                    .col-xs-12.col-sm-3
+                      p From time
+                      select.cs-select.cs-select-style
+                        option disabled="disabled" selected="selected" value=""
+                        option value="1"  1
+                        option value="2"  3
+                    .col-xs-12.col-sm-3
+                      p To time
+                      select.cs-select.cs-select-style
+                        option disabled="disabled" selected="selected" value=""
+                        option value="1"  1
+                        option value="2"  3
+              .col-xs-12.col-sm-1
+                button.line.plus
+            .content-title-form
+              h5
+                | Fees and conditions
+              .tooltip-trigger data-placement="top" data-toggle="tooltip" title="You can add more than one condition to each query. For example), you may allow 2 students with the price increased by 10 dollars and 3 students with the price increased by 15 dollars from the original amount."
+            .row
+              .col-xs-12.col-sm-11
+                .content-duplicate-row
+                  .row
+                    .col-xs-12.col-sm-6
+                      p Class duration
+                      select.cs-select.cs-select-style
+                        option disabled="disabled" selected="selected" value=""  Select duration
+                        option value="30"  30 mins
+                        option value="45"  45 mins
+                        option value="1 hour"  1 hour
+                        option value="2 hours"  2 hours
+                        option value="3 hours"  3 hours
+                        option value="4 hours"  4 hours
+                        option value="3 hours"  5 hours
+                        option value="Full day"  Full day
+                    .col-xs-12.col-sm-6
+                      p How much do you charge?
+                      input name="rate" placeholder="$" type="text" /
+              .col-xs-12.col-sm-1
+                button.line.plus
+              .col-xs-12.col-sm-11
+                .row
+                  .col-xs-12.col-sm-6
+                    p
+                      | Stduent(s) per lesson
+                      span.tooltip-trigger data-placement="top" data-toggle="tooltip" title="How many students can attend the class together? If more than one student is allowed), your class will be discovered when they search group lessons."
+                  .col-xs-12.col-sm-6
+                    p
+                      | Any changes in price?
+                      label (per lesson)
+                #duplicate-content-price.content-duplicate-row-noTitle
+                  .row
+                    .col-xs-12.col-sm-6
+                      select.cs-select.cs-select-style
+                        option value="2"  1
+                        option value="2"  2
+                        option value="3"  3
+                        option value="4"  4
+                        option value="5"  5+
+                    .col-xs-12.col-sm-6
+                      .col-xs-12
+                        .row.bottom-xs
+                          .price-changes-selection
+                            .row
+                              .col-xs-6
+                                input.percent name="student-percent" type="radio" /
+                              .col-xs-6
+                                input.positive name="student-positive" type="radio" /
+                            .row
+                              .col-xs-6
+                                input.dollar name="student-percent" type="radio" /
+                              .col-xs-6
+                                input.negative name="student-positive" type="radio" /
+                          .input-field
+                            input name="rate" placeholder="$" type="text" value="0" /
+              .col-xs-12.col-sm-1
+                #duplicate-price onlick="duplicate"
+                  button.line.plus
+              .col-xs-12.col-sm-11
+                .content-duplicate-row
+                  .row
+                    .col-xs-12.col-sm-6
+                      p
+                        | Do you offer any packages?
+                        span.tooltip-trigger data-placement="top" data-toggle="tooltip" title="Students will pay per lesson by default. Only select full package when you have a fix amount of lessons for this class. You may configure your lessons in the section below."
+                      select.cs-select.cs-select-style
+                        option value="Pay per lesson"  Pay per lesson
+                        option value="3 lessons"  3 lessons
+                        option value="6 lessons"  6 lessons
+                        option value="Full package"  Full package
+                    .col-xs-12.col-sm-6
+                      p
+                        | Any changes in price?
+                        label (per lesson)
+                      .col-xs-12
+                        .row.bottom-xs
+                          .price-changes-selection
+                            .row
+                              .col-xs-6
+                                input.percent name="packages-percent" type="radio" /
+                              .col-xs-6
+                                input.positive name="packages-positive" type="radio" /
+                            .row
+                              .col-xs-6
+                                input.dollar name="packages-percent" type="radio" /
+                              .col-xs-6
+                                input.negative name="packages-positive" type="radio" /
+                          .input-field
+                            input name="rate" placeholder="$" type="text" value="0" /
+              .col-xs-12.col-sm-1
+                button.line.plus
+              .col-xs-12.col-sm-11
+                .content-duplicate-row
+                  .row
+                    .col-xs-12.col-sm-6
+                      p
+                        | Accept location suggestion?
+                        span.tooltip-trigger data-placement="top" data-toggle="tooltip" title="If you are willing to travel), student can suggest a location of their choice when they book your class."
+                      select.cs-select.cs-select-style
+                        option value="Not willing to travel"  Not willing to travel
+                        option value="Within 5kms"  Within 5kms
+                        option value="Within 10kms"  Within 10kms
+                        option value="Within 30kms"  Within 30kms
+                        option value="Within 50kms"  Within 50kms
+                        option value="Anywhere"  Anywhere
+                    .col-xs-12.col-sm-6
+                      p
+                        | Any changes in price?
+                        label (per lesson)
+                      .col-xs-12
+                        .row.bottom-xs
+                          .price-changes-selection
+                            .row
+                              .col-xs-6
+                                input.percent name="location-percent" type="radio" /
+                              .col-xs-6
+                                input.positive name="location-positive" type="radio" /
+                            .row
+                              .col-xs-6
+                                input.dollar name="location-percent" type="radio" /
+                              .col-xs-6
+                                input.negative name="location-positive" type="radio" /
+                          .input-field
+                            input name="rate" placeholder="$" type="text" value="0" /
+              .col-xs-12.col-sm-1
+                button.line.plus
+        .card-content-default.card.large-card.padding-bottom-l.margin-bottom-m
+          .card-title
+            h4 Class requirements
+          .content-form
+            .row
+              .col-xs-12.col-md-6
+                p Is there an age limit for this class?
+                select.cs-select.cs-select-style
+                  option value="Any age"  Any age
+                  option value="5"  5 years old and above
+                  option value="10"  10 years old and above
+                  option value="20"  20 years old and above
+              .col-xs-12.col-md-6
+                p What language(s) do you teach in?
+                input name="language" type="text" /
+              .col-xs-12
+                p Any requirements students should know before booking the class?
+                textarea name="class-requirements" type="textarea"
+              .col-xs-12
+                p Anything to bring for the class?
+                input name="bring" type="text" /
+        .card-content-default.card.large-card.padding-bottom-l.margin-bottom-m
+          .card-title.has-button
+            h4
+              | Class curriculum
+              span.tooltip-trigger data-placement="top" data-toggle="tooltip" title="You can create a list of lessons and be very specific about your class content. You'll also be able to give feedback to your student after each lesson based on the set objective(s)."
+            button#duplicate-button.line onlick="duplicate"  + Add a lesson
+          #duplicate-content.content-form.content-duplicate-row
+            .row
+              .col-xs-12
+                p Lesson title
+                input name="Lesson title" type="text" /
+              .col-xs-12
+                p
+                  | Lesson description
+                  label (what will you teach in this lesson?)
+                textarea name="Lesson description" type="textarea"
+              .col-xs-12
+                .row
+                  .col-xs-12.col-sm-11
+                    p
+                      | Lesson objectives
+                      span.tooltip-trigger data-placement="top" data-toggle="tooltip" title="If set an objective), our system will ask you rather the student has achieve it or not after the lesson."
+                    input name="objectives" type="text" /
+                  .col-xs-12.col-sm-1
+                    button.line.plus
+        .card-content-default.card.large-card.padding-bottom-l.margin-bottom-m
+          .card-title.has-button
+            h4 Frequently asked questions
+            button#duplicate-button.line onlick="duplicate"  + Add a question
+          #duplicate-content.content-form.content-duplicate-row
+            .row
+              .col-xs-12
+                p Question
+                input name="Question" type="text" /
+              .col-xs-12
+                p Answer
+                textarea name="Answer" type="textarea"
+      .col-xs-12.col-md-4.col-lg-3
+        .row
+          .col-xs-12.last-xs.first-md
+            #sticky-bottom-anchor-mobile.card-content-default.card.padding-bottom-m.margin-bottom-m
+              .card-title.has-button
+                h4 Publish
+                button.line Save draft
+              .small-card-content
+                p To attract more students, try to fill out as much information about your class as possible before publishing.
+              .card-footer
+                .row
+                  .col-xs-6
+                    a href="/class-detail/own-class"
+                      button.line.full-width Preview
+                  .col-xs-6
+                    a href="/popups/confirm-address"
+                      button.full-width Publish
+          .col-xs-12
+            .card-content-default.card.margin-bottom-m
+              .card-title.has-button
+                h4
+                  | Photos & Videos
+                .tooltip-trigger data-placement="top" data-toggle="tooltip" title="You may add up to 5 images or videos to each class you create."
+                a href="/popups/photo-video-uploader/add-photo-video"
+                  button.line +Add
+              .small-card-content
+                .edit-image
+                  a href="/popups/photo-video-uploader/edit-photo-video"
+                    button.black Edit
+                .owl-carousel.owl-theme.add-new-photo
+                  .item
+                    .class-image-caption
+                      p.serif My collection of the 26 brand
+                    .image
+                      img src="/img/image-art-1.jpg" /
+                  .item
+                    .class-image-caption
+                      p.serif Me drawing some pretty cool stuff
+                    .image
+                      img src="/img/image-art-2.jpg" /
+          .col-xs-12
+            .card-content-default.card.padding-bottom-m.margin-bottom-m
+              .card-title.has-button
+                h4
+                  | Add to a course
+                .tooltip-trigger data-placement="top" data-toggle="tooltip" title="A course is a group of lessons under the same category. We'd suggest to group your classes for better search result."
+                button.line.btn-new-course + Create
+              .small-card-content
+                .checkbox
+                  input name="course" type="radio" /
+                  p Easy Hip Hop Dance Tutorials
+                .checkbox
+                  input name="course" type="radio" /
+                  p Cooking in Disguise
+              .card-footer.add-new-course
+                p Course title  (160 words max)
+                input name="Course title" type="text" /
+                .row
+                  .col-xs-6
+                    button.orange.full-width Create course
+                  .col-xs-6
+                    button.line.full-width.btn-cancel-new-course Cancel
+          .sticky-bottom
+            .row
+              .col-xs-6
+                h4.title Create class
+              .col-xs-6
+                a href="#sticky-bottom-anchor-mobile"
+                  button.large.right Publish

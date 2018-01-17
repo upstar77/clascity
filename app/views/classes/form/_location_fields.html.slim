@@ -1,0 +1,17 @@
+.js-nested-fields.js-class-location
+  .d-none
+    = f.input :address, input_html: { class: 'js-location-address' }
+    = f.input :city, input_html: { class: 'js-location-city' }
+    = f.input :postal_code, input_html: { class: 'js-location-postal_code' }
+    = f.input :state, input_html: { class: 'js-location-state' }
+    = f.input :state_code, input_html: { class: 'js-location-state_code' }
+    = f.input :country_code, input_html: { class: 'js-location-country_code' }
+    = f.input :longitude, input_html: { class: 'js-location-longitude' }
+    = f.input :latitude, input_html: { class: 'js-location-latitude' }
+  .js-location-address-label
+    = f.object.address
+  span
+    a.js-edit-location[href="#"]
+      | Edit
+  span
+    = link_to_remove_association "Remove", f, { wrapper_class: 'js-nested-fields' }

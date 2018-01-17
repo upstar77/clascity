@@ -1,0 +1,10 @@
+div
+  p
+    strong
+      | Addresses:
+  #class-locations
+    = f.simple_fields_for :locations do |location|
+      - render 'classes/form/location_fields', f: location
+    =  link_to_add_association 'Add address', f, :locations, class:'d-none js-add-location-cocoon-btn', partial: 'classes/form/location_fields'
+    button.btn.btn-info.btn-lg[type="button" data-toggle="modal" data-target="#class-add-location-modal"]
+      |  Add address 

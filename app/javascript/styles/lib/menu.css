@@ -1,0 +1,131 @@
+.nav-icon4 {
+  width: 20px;
+  height: 10px;
+  position: relative;
+  float: right;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+.nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 2.2px;
+  width: 100%;
+  background: #60B6FF;
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+
+.nav-icon4 span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.nav-icon4 span:nth-child(2) {
+  top: 6px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.nav-icon4.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -4px;
+  left: 4px;
+}
+
+
+.nav-icon4.open span:nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 10px;
+  left: 4.2px;
+}
+
+.slide-in-out
+{
+    text-decoration:none;
+    position: relative; /* prepare the position for sliding in and out */
+    padding-bottom:10px;
+
+}
+/* add a empty string before the elment with class .slide-in-out  */
+.slide-in-out:before
+{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    transition: width 0s ease, background-color .5s ease;
+    -webkit-transition: width 0s ease, background-color .5s ease;
+    -moz-transition: width 0s ease, background-color .5s ease;
+
+    /* position the content to the left bottom corner of the parent element to make it to slide in from left to right on hover */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 5px;
+}
+/* add a empty string after the elment with class .slide-in-out  */
+.slide-in-out:after
+{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #60B6FF;
+    transition: width .5s ease;
+    -webkit-transition: width .5s ease, background-color .5s ease;
+    -moz-transition: width .5s ease, background-color .5s ease;
+
+    /* position the content to the left bottom corner of the parent element to make it to slide out from left to right on hover */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+}
+
+/* Change the width and background on hover, aka sliding in and out */
+.slide-in-out:hover:before
+{
+    width: 100%;
+    background: #60B6FF;
+    transition: width .5s ease;
+    -webkit-transition: width .5s ease;
+    -moz-transition: width .5s ease;
+}
+.slide-in-out:hover:after
+{
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+    -webkit-transition: width 0s ease;
+    -moz-transition: width .0s ease;
+}

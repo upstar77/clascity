@@ -1,0 +1,32 @@
+.navbar
+  .row
+    .col-xs-2
+      a(href=root_path)
+        img.logo src=asset_pack_path("images/clascity-logo.svg")
+    .col-xs-10
+      ul.nav-item
+        a(href="#")
+          li Search a class
+        a(href="#")
+          li Help
+        a(href=new_registration_path(User))
+          li
+            button.large
+              |Sign up to teach or learn
+.navbar-mobile
+  .row
+    .col-xs-12
+      .logo
+        a(href=root_path)
+          img src=asset_pack_path("images/clascity-logo.svg")
+      .menu-button
+        img src=asset_pack_path("images/icon-menu-btn.svg")
+      ul.nav-item
+        a(href="$")
+          li Search a class
+        a(href="$")
+          li Help
+        a(href=new_registration_path(User))
+          li
+            button.large
+              |Sign up to teach or learn

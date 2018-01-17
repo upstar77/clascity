@@ -1,0 +1,19 @@
+h2
+  = @classe.title
+p
+  = @classe.description
+p
+  | Is certified: 
+  = @classe.certified
+p
+  | Is private: 
+  = @classe.private
+p
+  - if @classe.tags.any?
+    tr#tags
+      th
+        | Tags:
+      td
+        = render @classe.tags
+  p
+    = link_to "Edit class", edit_classe_path

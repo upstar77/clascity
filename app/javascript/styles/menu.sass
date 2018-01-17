@@ -1,0 +1,177 @@
+header
+	-webkit-box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.08)
+	-moz-box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.08)
+	box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.08)
+	background: white
+	display: inline-block
+	width: 100%
+	position: absolute
+	top: 0
+	z-index: 100
+
+.loggedOut
+	ul.nav-item
+		margin: 10px 0
+img.logo
+	margin: 20px 0
+	line-height: 0
+	vertical-align: middle
+ul.nav-item
+	text-align: right
+	margin: 12.5px 0
+	float: right
+	li
+		display: inline
+		margin-left: 30px
+		color: $font_color_black
+		&.icon
+			display: none
+.nav-incoming
+	float: right
+	display: inline-block
+	background: $color_bg_lightGrey
+	padding: 14px 12px
+	margin: 0 20px
+	.header-notification
+		cursor: pointer
+	.dropdown
+		float: left
+		.dropdown-menu
+			left: initial
+			right: -60px
+			top: 50px
+			max-width: 440px
+			padding: 0 20px
+			box-sizing: border-box
+			border: none
+			.card-content-message
+				border-bottom: $border
+				p
+					margin-top: 0
+				.rows-active
+					max-height: 212px
+					overflow-y: scroll
+					&::-webkit-scrollbar
+						width: 0px
+						background: transparent
+						display: none
+			.card-content-pair
+				.col-md-3
+					label
+						float: right
+						color: $font_color_lightGrey
+				.rows-active
+					max-height: 240px
+					overflow-y: scroll
+					&::-webkit-scrollbar
+						width: 0px
+						background: transparent
+						display: none
+				.content-row
+					overflow: hidden
+
+	.incoming
+		width: 30px
+		height: 30px
+		position: relative
+		border: $border
+		border-radius: 50%
+		background: white
+		margin: 0 8px
+		float: left
+		&.new
+			border: 1px solid $color_blue
+		.count
+			background: $color_orange
+			width: 12px
+			height: 12px
+			border-radius: 50px
+			text-align: center
+			position: absolute
+			top: 0
+			right: -4px
+			border: 1px solid white
+			color: white
+			font-weight: 700
+			line-height: 8px
+			span
+				font-size: 8px
+				color: white
+		img
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			margin: auto
+.nav-userSetting
+	float: right
+	display: inline-block
+	.dropdown
+		float: right
+		.dropdown-menu
+			right: 0
+			left: auto
+	.user-name
+		line-height: 60px
+	.user-image
+		border-radius: 50%
+		float: right
+		margin: 10px 0 10px 20px
+		line-height: 0
+		width: 40px
+		height: 40px
+		cursor: pointer
+		img
+			position: relative
+			width: 40px
+			height: 40px
+.navbar-mobile
+	line-height: 0
+	.logo
+		display: inline-block
+		float: left
+		margin: 20px 0
+		a
+			float: left
+			display: inline-block
+			line-height: 0
+	ul.nav-item
+		display: none
+		margin-bottom: 20px
+		padding-bottom: 10px
+		width: 100%
+		padding: 0
+		li
+			display: block
+			font-size: 18px
+			text-align: left
+			margin-left: 0
+			border-bottom: $border
+			margin-bottom: 10px
+			padding-bottom: 10px
+		a
+			&:last-child
+				li
+					border-bottom: none
+					margin-bottom: 0
+					padding-bottom: 0
+		button
+			margin-top: 10px
+			width: 100%
+.menu-button
+	text-align: right
+	img
+		padding: 23px 0
+		width: 18px
+
+@media screen and (max-width:62em)
+	.navbar
+		display: none
+@media screen and (min-width:62em)
+	.navbar-mobile
+		display: none
+
+
+
+

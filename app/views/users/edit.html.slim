@@ -1,0 +1,8 @@
+h2
+  | Edit my profile
+= simple_form_for (@user) do |f|
+  .form-inputs
+    = render "users/basic_info_fields", user: @user, f: f
+    = render "users/avatar_fields", user: @user, f: f
+  .form-actions
+    = f.button :submit, "Edit"
