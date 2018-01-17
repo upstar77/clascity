@@ -3,7 +3,7 @@
 	padding: 200px 0 70px 0;
 	width: 960px;
 	background: url("https://dl.dropboxusercontent.com/u/4277345/codepen/pr-plan-scale.png") bottom center no-repeat;
-	
+
 }
 
 .dragdealer {
@@ -36,7 +36,7 @@
 .square{
   position: absolute;
   top: 0;
-  left: 0;	  
+  left: 0;
   margin-top: -13px;
   margin-left: -10px;
   cursor: pointer;
@@ -81,7 +81,7 @@
 		bottom: -20px;
 		left: 107px;
 	}
-	
+
 	.infobox:before {
 		content: '';
 		position: absolute;
@@ -94,7 +94,7 @@
 		bottom: -23px;
 		left: 106px;
 	}
-	
+
 	.titlebar{
 		background: #008da8;
 		color: #FFF;
@@ -103,15 +103,15 @@
 		font-size: 15px;
 	}
 	#plan-holder{font-weight: bold;}
-	
+
 	.innerbox{
 		padding: 1em;
 	}
-	
+
 	.info-price{color: #e07c00; font-size: 33px; line-height: 1.8em;}
 
-	
+
 	.annual-label{
 	  color: #505054; font-size:14.5px; font-weight: bold; width: 110px; line-height: 1.8em;}
-	.annual-price{color: #939393; font-size: 17px; width: 110px;} 
+	.annual-price{color: #939393; font-size: 17px; width: 110px;}
 

@@ -11,7 +11,9 @@
     "bootstrap": "4.0.0-beta",
     "classnames": "^2.2.5",
     "google-maps": "^3.2.1",
+    "jquery-ui": "^1.12.1",
     "js-logger": "^1.4.1",
+    "owl.carousel": "^2.2.0",
     "popper.js": "^1.12.5",
     "prop-types": "^15.6.0",
     "ramda": "^0.24.1",
@@ -24,6 +26,7 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "reselect": "^3.0.1",
+    "sass-convert": "^0.5.2",
     "webpack-merge": "^4.1.0"
   },
   "devDependencies": {
